@@ -1,0 +1,255 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #e4bd21;
+  --color-gold-muted: rgba(228, 189, 33, 0.18);
+  --color-gold-soft: rgba(228, 189, 33, 0.12);
+  --color-navy: #162740;
+  --color-navy-dark: color-mix(in srgb, #162740 75%, #000000 25%);
+  --color-navy-deep: color-mix(in srgb, #162740 55%, #000000 45%);
+  --color-navy-light: color-mix(in srgb, #162740 85%, #ffffff 15%);
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+:root {
+  --color-gold-raw: 228, 189, 33;
+  --color-navy-raw: 22, 39, 64;
+  --header-height: 80px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-height);
+  background-color: #162740;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #162740;
+  color: #ffffff;
+  overflow-x: hidden;
+  min-height: 100dvh;
+}
+
+/* Glassmorphism Classes */
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(228, 189, 33, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(24px) saturate(140%);
+  -webkit-backdrop-filter: blur(24px) saturate(140%);
+  border: 1px solid rgba(228, 189, 33, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+}
+
+@supports not (backdrop-filter: blur(16px)) {
+  .glass {
+    background: rgba(22, 39, 64, 0.92);
+  }
+  .glass-strong {
+    background: rgba(22, 39, 64, 0.98);
+  }
+}
+
+@media (max-width: 640px) {
+  .glass {
+    backdrop-filter: blur(10px) saturate(140%);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+  }
+  .glass-strong {
+    backdrop-filter: blur(12px) saturate(140%);
+    -webkit-backdrop-filter: blur(12px) saturate(140%);
+  }
+}
+
+/* Gold Glow on Hover */
+.gold-glow-hover {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.gold-glow-hover:hover {
+  box-shadow: 0 0 0 1px #e4bd21, 0 10px 40px rgba(228, 189, 33, 0.25);
+}
+
+/* Shimmer Border for Hero Form Card */
+@keyframes borderShimmer {
+  0%, 100% {
+    border-color: rgba(228, 189, 33, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+  50% {
+    border-color: rgba(228, 189, 33, 0.55);
+    box-shadow: 0 12px 40px rgba(228, 189, 33, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  }
+}
+
+.hero-card-shimmer {
+  animation: borderShimmer 6s ease-in-out infinite;
+}
+
+/* Announcement Bar Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Fluid Typography Utilities */
+.h1-fluid {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 5vw + 0.5rem, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.h2-fluid {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.h3-fluid {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  line-height: 1.25;
+}
+
+.eyebrow {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #e4bd21;
+  font-weight: 600;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #162740;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(228, 189, 33, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(228, 189, 33, 0.6);
+}
+
+/* Focus styles for accessibility */
+*:focus-visible {
+  outline: 2px solid #e4bd21;
+  outline-offset: 2px;
+}
+
+/* Floating Orb Drift */
+@keyframes orbDriftOne {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(40px, -30px) scale(1.08);
+  }
+  66% {
+    transform: translate(-30px, 25px) scale(0.95);
+  }
+}
+
+@keyframes orbDriftTwo {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(-35px, 35px) scale(0.92);
+  }
+  66% {
+    transform: translate(30px, -20px) scale(1.06);
+  }
+}
+
+.animate-orb-1 {
+  animation: orbDriftOne 24s ease-in-out infinite;
+}
+
+.animate-orb-2 {
+  animation: orbDriftTwo 28s ease-in-out infinite;
+}
+
+/* Faint Grid Background */
+.hero-grid-pattern {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(228, 189, 33, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(228, 189, 33, 0.05) 1px, transparent 1px);
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, transparent 75%);
+}
+
+/* Mobile Tabs Horizontal Scrollbar Hide */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Soft Pulsing Ring for Floating WhatsApp Button */
+@keyframes softPulseRing {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+  50%, 100% {
+    transform: scale(1.45);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: softPulseRing 3.5s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee {
+    animation: none !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+  }
+  .animate-orb-1, .animate-orb-2, .hero-card-shimmer, .animate-pulse-ring {
+    animation: none !important;
+  }
+}
