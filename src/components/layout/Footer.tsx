@@ -6,7 +6,7 @@ import { siteConfig, isPlaceholder, getPhoneLink } from "@/data/site";
 import { caseStudies } from "@/data/caseStudies";
 
 export function Footer() {
-  const currentYear = 2025;
+  const currentYear = 2026;
   const phoneLink = getPhoneLink(siteConfig.phone);
   const showResults = caseStudies.length > 0;
 
