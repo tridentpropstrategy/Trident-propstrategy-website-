@@ -22,7 +22,7 @@ export function Footer() {
             <Link href="#top" className="flex items-center gap-3 w-fit">
               <div className="w-10 h-10 rounded-xl bg-white border border-[#e4bd21]/30 flex items-center justify-center">
                 <Image
-                  src="/logo-white.svg"
+                  src="/logo.svg"
                   alt="Trident Emblem"
                   width={24}
                   height={24}
