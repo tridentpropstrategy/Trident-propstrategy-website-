@@ -20,11 +20,11 @@ const microMarketOptions = [
 ];
 
 const unsoldUnitsOptions = [
-  { value: "1 - 5", label: "1 - 5 units" },
-  { value: "5 - 15", label: "5 - 15 units" },
-  { value: "15 - 40", label: "15 - 40 units" },
-  { value: "40 - 100", label: "40 - 100 units" },
-  { value: "New Project Pre-Launch", label: "New Project Pre-Launch" },
+  { value: "50 - 75", label: "50 - 75 units" },
+  { value: "75 - 100", label: "75 - 100 units" },
+  { value: "100 - 150", label: "100 - 150 units" },
+  { value: "150 - 200", label: "150 - 200 units" },
+  { value: "New Project Launch", label: "Project Pre-Launch" },
 ];
 
 const scopeOptions = [

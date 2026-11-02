@@ -42,7 +42,7 @@ export function Footer() {
             <p className="text-sm text-white/70 leading-relaxed max-w-sm">
               Strategic sales advisory, mandate acceleration, and channel partner
               activation exclusively tailored for small developers and mandate
-              owners across the Kalyan–Dombivli municipal corridor.
+              owners across the Kalyan Dombivili and Central Suburbs.
             </p>
 
             <div className="flex items-center gap-2 mt-2 text-xs text-[#e4bd21]/90">

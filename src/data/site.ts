@@ -13,14 +13,16 @@ export const siteConfig = {
   announcementText:
     "KDMC ADVISORY MONITOR • Empowering Kalyan–Dombivli developers with data-driven sales strategy • 100% developer confidentiality • Channel partner network across MMR • Book your free strategy audit",
   domain: "https://tridentpropstrategy.in",
-  phone: "9136299506",
-  whatsapp: "8879975504",
+  phone: "7304355449",
+  whatsapp: "7304355448",
   email: "tridentpropstrategy@gmail.com",
   address: "Trident Prop Strategy Tower, Station Road, Kalyan West, KDMC Region, Maharashtra 421301",
   city: "Kalyan",
   region: "Maharashtra, India",
   coverageAreas: [
     "Kalyan East & West",
+    "Thane",
+    "Navi Mumbai",
     "Dombivli & Shilphata",
     "Ambernath & Badlapur",
     "Shahad & Titwala",

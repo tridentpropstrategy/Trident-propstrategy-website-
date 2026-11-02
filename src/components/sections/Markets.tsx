@@ -18,17 +18,28 @@ export function Markets() {
   const selectedMarket = markets.find((m) => m.id === selectedId) || markets[0];
   const selectedIndex = markets.findIndex((m) => m.id === selectedId);
 
-  // Scroll active tab into view horizontally on mobile
+  const isFirstRender = useRef(true);
+
+  // Scroll active tab horizontally in mobile container on user selection (never on initial page load)
   useEffect(() => {
-    if (selectedIndex !== -1 && tabsRef.current[selectedIndex]) {
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    if (
+      selectedIndex !== -1 &&
+      tabsRef.current[selectedIndex] &&
+      scrollContainerRef.current
+    ) {
       const activeTabEl = tabsRef.current[selectedIndex];
-      if (activeTabEl && scrollContainerRef.current) {
-        activeTabEl.scrollIntoView({
-          behavior: "smooth",
-          block: "nearest",
-          inline: "center",
-        });
-      }
+      const container = scrollContainerRef.current;
+      const tabLeft = activeTabEl.offsetLeft;
+      const tabWidth = activeTabEl.offsetWidth;
+      const containerWidth = container.offsetWidth;
+      container.scrollTo({
+        left: tabLeft - containerWidth / 2 + tabWidth / 2,
+        behavior: "smooth",
+      });
     }
   }, [selectedIndex]);
 
