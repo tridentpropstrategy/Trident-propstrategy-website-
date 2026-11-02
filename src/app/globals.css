@@ -236,6 +236,97 @@ body {
   animation: softPulseRing 3.5s cubic-bezier(0.24, 0, 0.38, 1) infinite;
 }
 
+/* Custom Accessible Range Slider */
+.calc-range-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 44px;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+}
+
+.calc-range-slider:focus {
+  outline: none;
+}
+
+.calc-range-slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    to right,
+    #e4bd21 0%,
+    #e4bd21 var(--pct, 0%),
+    rgba(255, 255, 255, 0.12) var(--pct, 0%),
+    rgba(255, 255, 255, 0.12) 100%
+  );
+  transition: background 0.1s ease;
+}
+
+.calc-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #e4bd21;
+  border: 3px solid #162740;
+  box-shadow: 0 0 10px rgba(228, 189, 33, 0.4);
+  cursor: grab;
+  margin-top: -8px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.calc-range-slider:hover::-webkit-slider-thumb,
+.calc-range-slider:focus-visible::-webkit-slider-thumb {
+  transform: scale(1.15);
+  box-shadow: 0 0 16px rgba(228, 189, 33, 0.7), 0 0 0 2px rgba(228, 189, 33, 0.5);
+}
+
+.calc-range-slider:active::-webkit-slider-thumb {
+  cursor: grabbing;
+  transform: scale(1.05);
+}
+
+.calc-range-slider::-moz-range-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.calc-range-slider::-moz-range-progress {
+  height: 6px;
+  border-radius: 9999px;
+  background: #e4bd21;
+}
+
+.calc-range-slider::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #e4bd21;
+  border: 3px solid #162740;
+  box-shadow: 0 0 10px rgba(228, 189, 33, 0.4);
+  cursor: grab;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.calc-range-slider:hover::-moz-range-thumb,
+.calc-range-slider:focus-visible::-moz-range-thumb {
+  transform: scale(1.15);
+  box-shadow: 0 0 16px rgba(228, 189, 33, 0.7), 0 0 0 2px rgba(228, 189, 33, 0.5);
+}
+
+.calc-range-slider:focus-visible {
+  outline: 2px solid #e4bd21;
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
 /* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {

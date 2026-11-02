@@ -7,10 +7,13 @@ interface LeadFormContextType {
   setPreselectedMarket: (market: string) => void;
   preselectedScope: string;
   setPreselectedScope: (scope: string) => void;
+  preselectedUnits: string;
+  setPreselectedUnits: (units: string) => void;
   preselectedSource: "hero" | "contact" | "channel-partner";
   setPreselectedSource: (source: "hero" | "contact" | "channel-partner") => void;
   selectMarketAndScroll: (marketLabel: string) => void;
   selectScopeAndScroll: (scope: string, source?: "contact" | "channel-partner") => void;
+  selectUnitsAndScroll: (unitsRange: string) => void;
 }
 
 const LeadFormContext = createContext<LeadFormContextType | undefined>(undefined);
@@ -18,6 +21,7 @@ const LeadFormContext = createContext<LeadFormContextType | undefined>(undefined
 export function LeadFormProvider({ children }: { children: React.ReactNode }) {
   const [preselectedMarket, setPreselectedMarket] = useState<string>("");
   const [preselectedScope, setPreselectedScope] = useState<string>("");
+  const [preselectedUnits, setPreselectedUnits] = useState<string>("");
   const [preselectedSource, setPreselectedSource] = useState<
     "hero" | "contact" | "channel-partner"
   >("contact");
@@ -42,6 +46,14 @@ export function LeadFormProvider({ children }: { children: React.ReactNode }) {
     }
   };
 
+  const selectUnitsAndScroll = (unitsRange: string) => {
+    setPreselectedUnits(unitsRange);
+    const contactEl = document.querySelector("#contact");
+    if (contactEl) {
+      contactEl.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <LeadFormContext.Provider
       value={{
@@ -49,10 +61,13 @@ export function LeadFormProvider({ children }: { children: React.ReactNode }) {
         setPreselectedMarket,
         preselectedScope,
         setPreselectedScope,
+        preselectedUnits,
+        setPreselectedUnits,
         preselectedSource,
         setPreselectedSource,
         selectMarketAndScroll,
         selectScopeAndScroll,
+        selectUnitsAndScroll,
       }}
     >
       {children}

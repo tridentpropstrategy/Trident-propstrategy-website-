@@ -20,10 +20,12 @@ const microMarketOptions = [
 ];
 
 const unsoldUnitsOptions = [
+  { value: "1 - 5", label: "1 - 5 units" },
+  { value: "5 - 15", label: "5 - 15 units" },
+  { value: "15 - 30", label: "15 - 30 units" },
+  { value: "30+", label: "30+ units" },
   { value: "50 - 75", label: "50 - 75 units" },
   { value: "75 - 100", label: "75 - 100 units" },
-  { value: "100 - 150", label: "100 - 150 units" },
-  { value: "150 - 200", label: "150 - 200 units" },
   { value: "New Project Launch", label: "Project Pre-Launch" },
 ];
 
@@ -54,6 +56,7 @@ export function ContactForm() {
   const {
     preselectedMarket,
     preselectedScope,
+    preselectedUnits,
     preselectedSource,
   } = useLeadForm();
 
@@ -68,10 +71,13 @@ export function ContactForm() {
 
   const [overrideMarket, setOverrideMarket] = useState<string | null>(null);
   const [overrideScope, setOverrideScope] = useState<string | null>(null);
+  const [overrideUnits, setOverrideUnits] = useState<string | null>(null);
 
   const effectiveMarket = overrideMarket ?? preselectedMarket ?? "";
   const effectiveScope =
     overrideScope ?? (preselectedScope || "Full Sales Acceleration Mandate");
+  const effectiveUnits =
+    overrideUnits ?? (preselectedUnits || formData.unsoldUnits || "5 - 15");
 
   const [errors, setErrors] = useState<ValidationErrors>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
@@ -87,6 +93,8 @@ export function ContactForm() {
       setOverrideMarket(value);
     } else if (name === "scope") {
       setOverrideScope(value);
+    } else if (name === "unsoldUnits") {
+      setOverrideUnits(value);
     } else {
       setFormData((prev) => ({ ...prev, [name]: value }));
     }
@@ -99,6 +107,7 @@ export function ContactForm() {
     ...formData,
     microMarket: effectiveMarket,
     scope: effectiveScope,
+    unsoldUnits: effectiveUnits,
   };
 
   const handleBlur = (field: "name" | "phone" | "project") => {
@@ -333,10 +342,13 @@ export function ContactForm() {
             <CustomSelect
               id="contact-unsoldunits"
               name="unsoldUnits"
-              value={formData.unsoldUnits}
+              value={effectiveUnits}
               placeholder="Select Unsold Units"
               options={unsoldUnitsOptions}
-              onChange={(val) => setFormData((prev) => ({ ...prev, unsoldUnits: val }))}
+              onChange={(val) => {
+                setOverrideUnits(val);
+                setFormData((prev) => ({ ...prev, unsoldUnits: val }));
+              }}
               disabled={status === "submitting"}
             />
           </div>

@@ -7,6 +7,7 @@ import { OrbBackground } from "@/components/ui/OrbBackground";
 import { Hero } from "@/components/sections/Hero";
 import { Problem } from "@/components/sections/Problem";
 import { Approach } from "@/components/sections/Approach";
+import { Calculator } from "@/components/sections/Calculator";
 import { Markets } from "@/components/sections/Markets";
 import { WhyTrident } from "@/components/sections/WhyTrident";
 import { HowItWorks } from "@/components/sections/HowItWorks";
@@ -38,6 +39,9 @@ export default function HomePage() {
 
           {/* 4. Approach / Services Section */}
           <Approach />
+
+          {/* 4.5. Stalled Inventory Capital Recovery Simulator */}
+          <Calculator />
 
           {/* 5. KDMC Markets Interactive Matrix */}
           <Markets />

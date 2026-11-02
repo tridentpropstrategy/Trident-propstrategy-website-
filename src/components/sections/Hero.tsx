@@ -6,7 +6,7 @@ import { ShieldCheck, Database, Award, ArrowUpRight } from "lucide-react";
 import { stats, hasVerifiedStats } from "@/data/stats";
 import { Button } from "@/components/ui/Button";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { TridentWatermark } from "@/components/ui/TridentWatermark";
+// import { TridentWatermark } from "@/components/ui/TridentWatermark";
 // import { HeroForm } from "@/components/ui/HeroForm";
 
 export function Hero() {
