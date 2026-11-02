@@ -82,7 +82,7 @@ export function MobileMenu({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm h-[100dvh] glass-strong z-50 p-6 flex flex-col justify-between md:hidden border-l border-[#e4bd21]/30 shadow-2xl"
+            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm h-[100dvh] glass-strong z-50 p-6 flex flex-col justify-between md:hidden border-l border-[#d5b13a]/30 shadow-2xl"
           >
             <div>
               {/* Header inside drawer */}
@@ -96,7 +96,7 @@ export function MobileMenu({
                     className="w-8 h-8"
                   />
                   <div>
-                    <span className="block font-serif font-bold text-sm tracking-wider text-[#e4bd21]">
+                    <span className="block font-serif font-bold text-sm tracking-wider text-[#d5b13a]">
                       {siteConfig.wordmark.primary}
                     </span>
                     <span className="block text-[10px] tracking-widest text-white/60">
@@ -107,7 +107,7 @@ export function MobileMenu({
                 <button
                   type="button"
                   onClick={onClose}
-                  className="w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white/80 hover:text-[#e4bd21] hover:border-[#e4bd21]/40"
+                  className="w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white/80 hover:text-[#d5b13a] hover:border-[#d5b13a]/40"
                   aria-label="Close navigation menu"
                 >
                   <X className="w-5 h-5" />
@@ -125,13 +125,13 @@ export function MobileMenu({
                       onClick={(e) => handleLinkClick(e, item.href)}
                       className={`flex items-center justify-between px-4 py-3.5 rounded-xl text-base font-medium transition-all ${
                         isActive
-                          ? "bg-[#e4bd21]/15 text-[#e4bd21] border border-[#e4bd21]/30"
-                          : "text-white/80 hover:text-[#e4bd21] hover:bg-white/5"
+                          ? "bg-[#d5b13a]/15 text-[#d5b13a] border border-[#d5b13a]/30"
+                          : "text-white/80 hover:text-[#d5b13a] hover:bg-white/5"
                       }`}
                     >
                       <span>{item.label}</span>
                       {isActive && (
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#e4bd21]" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#d5b13a]" />
                       )}
                     </Link>
                   );

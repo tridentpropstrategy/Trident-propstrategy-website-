@@ -26,13 +26,13 @@ export function Results() {
         <RevealGroup className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {caseStudies.map((item) => (
             <RevealItem key={item.id} className="h-full">
-              <GlassCard className="p-7 flex flex-col h-full border-white/10 hover:border-[#e4bd21]/50">
+              <GlassCard className="p-7 flex flex-col h-full border-white/10 hover:border-[#d5b13a]/50">
                 {/* Main Content */}
                 <div>
                   {/* Location & Project Meta */}
                   <div className="flex items-center justify-between text-xs text-white/50 mb-4 pb-3 border-b border-white/10">
                     <span className="flex items-center gap-1.5 text-white/80">
-                      <MapPin className="w-3.5 h-3.5 text-[#e4bd21]" />
+                      <MapPin className="w-3.5 h-3.5 text-[#d5b13a]" />
                       {item.location}
                     </span>
 
@@ -56,8 +56,8 @@ export function Results() {
                 {/* Bottom Content - Always Aligned */}
                 <div className="mt-auto pt-6">
                   {/* Highlighted Result Box */}
-                  <div className="min-h-[124px] p-4 rounded-xl bg-[#e4bd21]/[0.08] border border-[#e4bd21]/25 flex flex-col justify-center">
-                    <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-[#e4bd21] font-semibold mb-1">
+                  <div className="min-h-[124px] p-4 rounded-xl bg-[#d5b13a]/[0.08] border border-[#d5b13a]/25 flex flex-col justify-center">
+                    <div className="flex items-center gap-2 text-xs uppercase tracking-wider text-[#d5b13a] font-semibold mb-1">
                       <TrendingUp className="w-3.5 h-3.5" />
                       <span>{item.resultLabel}</span>
                     </div>

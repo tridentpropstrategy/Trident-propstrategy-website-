@@ -86,7 +86,7 @@ export function Header() {
     <>
       <header
         className={`sticky top-0 z-40 w-full transition-all duration-300 ${isScrolled
-          ? "glass !rounded-none !border-x-0 !border-t-0 !border-b border-b-[#e4bd21]/25 py-3 md:py-4 shadow-[0_8px_30px_rgba(0,0,0,0.3)] backdrop-blur-md"
+          ? "glass !rounded-none !border-x-0 !border-t-0 !border-b border-b-[#d5b13a]/25 py-3 md:py-4 shadow-[0_8px_30px_rgba(0,0,0,0.3)] backdrop-blur-md"
           : "bg-transparent py-5 md:py-6"
           }`}
       >
@@ -95,9 +95,9 @@ export function Header() {
           <Link
             href="#top"
             onClick={(e) => handleNavClick(e, "#top")}
-            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e4bd21] rounded-lg p-1"
+            className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d5b13a] rounded-lg p-1"
           >
-            <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white border border-[#e4bd21]/20 flex items-center justify-center group-hover:border-[#e4bd21]/50 transition-colors">
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white border border-[#d5b13a]/20 flex items-center justify-center group-hover:border-[#d5b13a]/50 transition-colors">
               <Image
                 src="/logo.svg"
                 alt="Trident Emblem"
@@ -109,7 +109,7 @@ export function Header() {
             </div>
 
             <div className="flex flex-col">
-              <span className="font-serif font-bold text-base md:text-xl tracking-wider text-[#e4bd21] leading-tight">
+              <span className="font-serif font-bold text-base md:text-xl tracking-wider text-[#d5b13a] leading-tight">
                 {siteConfig.wordmark.primary}
               </span>
 
@@ -134,7 +134,7 @@ export function Header() {
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
                   className={`relative px-4 py-1.5 text-xs lg:text-sm font-medium transition-colors ${isActive
-                    ? "text-[#e4bd21]"
+                    ? "text-[#d5b13a]"
                     : "text-white/75 hover:text-white"
                     }`}
                 >
@@ -143,7 +143,7 @@ export function Header() {
                   {isActive && (
                     <motion.div
                       layoutId="activeNavIndicator"
-                      className="absolute inset-0 bg-[#e4bd21]/15 rounded-full border border-[#e4bd21]/30"
+                      className="absolute inset-0 bg-[#d5b13a]/15 rounded-full border border-[#d5b13a]/30"
                       transition={{
                         type: "spring",
                         stiffness: 380,
@@ -167,7 +167,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="md:hidden w-11 h-11 flex items-center justify-center rounded-xl glass border border-white/10 text-white/80 hover:text-[#e4bd21] hover:border-[#e4bd21]/30"
+            className="md:hidden w-11 h-11 flex items-center justify-center rounded-xl glass border border-white/10 text-white/80 hover:text-[#d5b13a] hover:border-[#d5b13a]/30"
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-navigation"
             aria-label="Open navigation menu"

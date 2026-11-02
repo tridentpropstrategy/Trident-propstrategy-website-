@@ -27,14 +27,14 @@ export function SectionHeading({
       )}
     >
       {eyebrow && (
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#e4bd21]/10 border border-[#e4bd21]/20 mb-4">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#e4bd21]" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#d5b13a]/10 border border-[#d5b13a]/30 mb-4">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#d5b13a]" />
           <span className="eyebrow">{eyebrow}</span>
         </div>
       )}
       <h2 className="h2-fluid text-white font-medium mb-4">
         {title}{" "}
-        {highlight && <span className="text-[#e4bd21] italic">{highlight}</span>}
+        {highlight && <span className="text-gold-gradient italic">{highlight}</span>}
       </h2>
       {description && (
         <p className="text-white/75 text-base md:text-lg leading-relaxed">

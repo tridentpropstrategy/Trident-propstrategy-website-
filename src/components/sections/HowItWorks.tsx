@@ -56,11 +56,11 @@ export function HowItWorks() {
               const Icon = step.icon;
               return (
                 <RevealItem key={idx}>
-                  <GlassCard className="p-6 md:p-7 flex flex-col justify-between h-full border-white/10 hover:border-[#e4bd21]/50">
+                  <GlassCard className="p-6 md:p-7 flex flex-col justify-between h-full border-white/10 hover:border-[#d5b13a]/50">
                     <div>
                       {/* Step Header */}
                       <div className="flex items-center justify-between mb-6">
-                        <div className="w-12 h-12 rounded-xl bg-[#e4bd21]/15 border border-[#e4bd21]/30 flex items-center justify-center text-[#e4bd21] shadow-[0_0_20px_rgba(228,189,33,0.15)]">
+                        <div className="w-12 h-12 rounded-xl bg-[#d5b13a]/15 border border-[#d5b13a]/30 flex items-center justify-center text-[#d5b13a] shadow-[0_0_20px_rgba(213,177,58,0.18)]">
                           <Icon className="w-6 h-6" />
                         </div>
                         <span className="font-serif text-3xl font-bold text-white/20">
@@ -77,7 +77,7 @@ export function HowItWorks() {
                       </p>
                     </div>
 
-                    <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-[11px] text-[#e4bd21]/80 font-medium uppercase tracking-wider">
+                    <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-[11px] text-[#d5b13a]/80 font-medium uppercase tracking-wider">
                       <span>Phase {step.number}</span>
                       <span>Verified Milestone</span>
                     </div>

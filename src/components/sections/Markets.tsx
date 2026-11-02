@@ -107,17 +107,17 @@ export function Markets() {
                   tabIndex={isSelected ? 0 : -1}
                   onClick={() => setSelectedId(market.id)}
                   onKeyDown={(e) => handleKeyDown(e, idx)}
-                  className={`relative shrink-0 snap-center min-h-[44px] px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer select-none border focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e4bd21] ${
+                  className={`relative shrink-0 snap-center min-h-[44px] px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 cursor-pointer select-none border focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d5b13a] ${
                     isSelected
-                      ? "text-[#162740] border-[#e4bd21] shadow-[0_4px_20px_rgba(228,189,33,0.3)] font-bold"
-                      : "text-white/80 border-[#e4bd21]/20 glass hover:border-[#e4bd21]/50 hover:text-white"
+                      ? "text-[#162740] border-[#d5b13a] shadow-[0_4px_20px_rgba(213,177,58,0.3)] font-bold"
+                      : "text-white/80 border-[#d5b13a]/20 glass hover:border-[#d5b13a]/50 hover:text-white"
                   }`}
                 >
                   {/* Sliding gold pill background using layoutId */}
                   {isSelected && (
                     <motion.div
                       layoutId="activeMarketPill"
-                      className="absolute inset-0 bg-[#e4bd21] rounded-full z-0"
+                      className="absolute inset-0 bg-gradient-to-r from-[#e4c760] via-[#d5b13a] to-[#bd9424] rounded-full z-0"
                       transition={{ type: "spring", stiffness: 450, damping: 32 }}
                     />
                   )}
@@ -150,14 +150,14 @@ export function Markets() {
                   : { opacity: 0, y: -12 }
               }
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className="glass-strong p-6 sm:p-8 md:p-10 rounded-[20px] border border-[#e4bd21]/30 shadow-2xl"
+              className="glass-strong p-6 sm:p-8 md:p-10 rounded-[20px] border border-[#d5b13a]/30 shadow-2xl"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
                 {/* Left Column: Sector, Label, Rates, Demand, Buyer Profile */}
                 <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
                   <div>
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#e4bd21]/15 border border-[#e4bd21]/30 mb-3">
-                      <Building2 className="w-3.5 h-3.5 text-[#e4bd21]" />
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#d5b13a]/15 border border-[#d5b13a]/30 mb-3">
+                      <Building2 className="w-3.5 h-3.5 text-[#d5b13a]" />
                       <span className="eyebrow !text-[11px]">{selectedMarket.sector}</span>
                     </div>
 
@@ -174,7 +174,7 @@ export function Markets() {
                         <span className="block text-[11px] uppercase tracking-wider text-white/50 mb-1">
                           Avg Carpet Rate
                         </span>
-                        <span className="font-serif text-lg sm:text-xl font-bold text-[#e4bd21]">
+                        <span className="font-serif text-lg sm:text-xl font-bold text-gold-gradient">
                           {selectedMarket.carpetRate}
                         </span>
                       </div>
@@ -184,7 +184,7 @@ export function Markets() {
                           Absorption Demand
                         </span>
                         <span className="font-semibold text-sm sm:text-base text-white/90 flex items-center gap-1.5">
-                          <TrendingUp className="w-4 h-4 text-[#e4bd21]" />
+                          <TrendingUp className="w-4 h-4 text-[#d5b13a]" />
                           {selectedMarket.demand}
                         </span>
                       </div>
@@ -192,7 +192,7 @@ export function Markets() {
 
                     {/* Target Buyer Profile */}
                     <div className="p-4 rounded-xl bg-white/[0.03] border border-white/10">
-                      <h4 className="text-xs uppercase font-semibold tracking-wider text-[#e4bd21] mb-1.5 flex items-center gap-1.5">
+                      <h4 className="text-xs uppercase font-semibold tracking-wider text-[#d5b13a] mb-1.5 flex items-center gap-1.5">
                         <Sparkles className="w-3.5 h-3.5" />
                         Target Buyer Profile
                       </h4>
@@ -208,7 +208,7 @@ export function Markets() {
                   <div className="space-y-6">
                     {/* Key Infrastructure Catalysts */}
                     <div>
-                      <h4 className="text-xs uppercase font-semibold tracking-wider text-[#e4bd21] mb-2 flex items-center gap-1.5">
+                      <h4 className="text-xs uppercase font-semibold tracking-wider text-[#d5b13a] mb-2 flex items-center gap-1.5">
                         <Route className="w-3.5 h-3.5" />
                         Key Infrastructure Catalysts
                       </h4>
@@ -221,7 +221,7 @@ export function Markets() {
 
                     {/* Recommended Trident Pitch Angle */}
                     <div>
-                      <h4 className="text-xs uppercase font-semibold tracking-wider text-[#e4bd21] mb-2 flex items-center gap-1.5">
+                      <h4 className="text-xs uppercase font-semibold tracking-wider text-[#d5b13a] mb-2 flex items-center gap-1.5">
                         <Sparkles className="w-3.5 h-3.5" />
                         Recommended Trident Pitch Angle
                       </h4>
@@ -236,7 +236,7 @@ export function Markets() {
                     <button
                       type="button"
                       onClick={(e) => handleConsultClick(e, selectedMarket.label)}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#e4bd21] hover:text-white transition-colors cursor-pointer group"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#d5b13a] hover:text-white transition-colors cursor-pointer group"
                     >
                       <span>Consult a {selectedMarket.label} strategy advisor</span>
                       <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

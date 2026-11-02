@@ -70,12 +70,12 @@ export function Approach() {
                 <GlassCard
                   variant={pillar.isHighlighted ? "strong" : "standard"}
                   className={`p-8 flex flex-col h-full relative ${pillar.isHighlighted
-                      ? "!border-[#e4bd21]/60 shadow-[0_12px_40px_rgba(228,189,33,0.18)] ring-1 ring-[#e4bd21]/40"
+                      ? "!border-[#d5b13a]/60 shadow-[0_12px_40px_rgba(213,177,58,0.22)] ring-1 ring-[#d5b13a]/40"
                       : "border-white/10"
                     }`}
                 >
                   {pillar.isHighlighted && (
-                    <div className="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-[#e4bd21] text-[#162740] text-[11px] font-bold tracking-wider uppercase shadow-md flex items-center gap-1">
+                    <div className="absolute -top-3.5 right-6 px-3 py-1 rounded-full bg-gradient-to-r from-[#e4c760] via-[#d5b13a] to-[#bd9424] text-[#162740] text-[11px] font-bold tracking-wider uppercase shadow-md flex items-center gap-1">
                       <Sparkles className="w-3 h-3" />
                     </div>
                   )}
@@ -84,11 +84,11 @@ export function Approach() {
                   <div className="flex flex-1 flex-col">
                     {/* Header: Roman Numeral + Icon */}
                     <div className="flex items-center justify-between mb-6">
-                      <div className="w-12 h-12 rounded-xl bg-[#e4bd21]/10 border border-[#e4bd21]/30 flex items-center justify-center text-[#e4bd21]">
+                      <div className="w-12 h-12 rounded-xl bg-[#d5b13a]/10 border border-[#d5b13a]/30 flex items-center justify-center text-[#d5b13a]">
                         <Icon className="w-6 h-6" />
                       </div>
 
-                      <span className="font-serif text-2xl font-bold text-[#e4bd21]/60">
+                      <span className="font-serif text-2xl font-bold text-[#d5b13a]/60">
                         {pillar.roman}
                       </span>
                     </div>
@@ -105,7 +105,7 @@ export function Approach() {
                     <div className="space-y-3 pt-4 border-t border-white/10">
                       {pillar.checks.map((chk, cIdx) => (
                         <div key={cIdx} className="flex items-center gap-3">
-                          <div className="w-5 h-5 rounded-md bg-[#e4bd21]/15 flex items-center justify-center text-[#e4bd21] shrink-0">
+                          <div className="w-5 h-5 rounded-md bg-[#d5b13a]/15 flex items-center justify-center text-[#d5b13a] shrink-0">
                             <CheckCircle2 className="w-3.5 h-3.5" />
                           </div>
 

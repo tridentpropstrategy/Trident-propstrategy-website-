@@ -19,7 +19,7 @@ import { LeadFormProvider } from "@/context/LeadFormContext";
 export default function HomePage() {
   return (
     <LeadFormProvider>
-      <div className="relative min-h-screen flex flex-col bg-[#162740] text-white selection:bg-[#e4bd21] selection:text-[#162740]">
+      <div className="relative min-h-screen flex flex-col bg-[#162740] text-white selection:bg-[#d5b13a] selection:text-[#162740]">
         {/* Ambient GPU-Accelerated Floating Background Orbs */}
         <OrbBackground />
 

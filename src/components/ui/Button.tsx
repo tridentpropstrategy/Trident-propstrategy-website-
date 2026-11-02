@@ -32,13 +32,13 @@ export function Button({
 
   const variantClasses = {
     primary:
-      "bg-[#e4bd21] text-[#162740] shadow-[0_4px_20px_rgba(228,189,33,0.25)] hover:shadow-[0_0_0_1px_#e4bd21,0_10px_40px_rgba(228,189,33,0.35)] hover:scale-[1.02] overflow-hidden",
+      "bg-gradient-to-r from-[#e4c760] via-[#d5b13a] to-[#bd9424] text-[#162740] font-bold shadow-[0_4px_20px_rgba(213,177,58,0.3),inset_0_1px_1px_rgba(255,255,255,0.4)] hover:shadow-[0_0_0_1px_#d5b13a,0_10px_35px_rgba(213,177,58,0.45),inset_0_1px_1px_rgba(255,255,255,0.5)] hover:scale-[1.02] border border-[#f0d879]/30 overflow-hidden",
     secondary:
-      "border border-[#e4bd21] text-[#e4bd21] bg-transparent hover:bg-[#e4bd21]/10 hover:shadow-[0_0_20px_rgba(228,189,33,0.15)] hover:scale-[1.01]",
+      "border border-[#d5b13a] text-[#d5b13a] bg-transparent hover:bg-[#d5b13a]/10 hover:shadow-[0_0_20px_rgba(213,177,58,0.18)] hover:scale-[1.01]",
     glass:
-      "glass text-white hover:text-[#e4bd21] hover:border-[#e4bd21] hover:shadow-[0_4px_24px_rgba(228,189,33,0.2)]",
+      "glass text-white hover:text-[#d5b13a] hover:border-[#d5b13a] hover:shadow-[0_4px_24px_rgba(213,177,58,0.2)]",
     ghost:
-      "text-white/80 hover:text-[#e4bd21] hover:bg-white/5",
+      "text-white/80 hover:text-[#d5b13a] hover:bg-white/5",
   }[variant];
 
   const content = (

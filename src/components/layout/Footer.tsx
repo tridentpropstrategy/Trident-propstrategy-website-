@@ -13,14 +13,14 @@ export function Footer() {
   return (
     <footer className="relative bg-[#111d30] border-t border-white/10 pt-16 pb-24 md:pb-16 text-white/80 overflow-hidden">
       {/* Decorative top gold hairline glow */}
-      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#e4bd21]/40 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#d5b13a]/40 to-transparent" />
 
       <div className="max-w-6xl mx-auto px-5 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-white/10">
           {/* Brand Info */}
           <div className="lg:col-span-4 flex flex-col gap-4">
             <Link href="#top" className="flex items-center gap-3 w-fit">
-              <div className="w-10 h-10 rounded-xl bg-white border border-[#e4bd21]/30 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-xl bg-white border border-[#d5b13a]/30 flex items-center justify-center">
                 <Image
                   src="/logo.svg"
                   alt="Trident Emblem"
@@ -30,7 +30,7 @@ export function Footer() {
                 />
               </div>
               <div>
-                <span className="block font-serif font-bold text-base tracking-wider text-[#e4bd21]">
+                <span className="block font-serif font-bold text-base tracking-wider text-[#d5b13a]">
                   {siteConfig.wordmark.primary}
                 </span>
                 <span className="block text-[10px] tracking-[0.2em] text-white/60 uppercase">
@@ -45,8 +45,8 @@ export function Footer() {
               owners across the Kalyan Dombivili and Central Suburbs.
             </p>
 
-            <div className="flex items-center gap-2 mt-2 text-xs text-[#e4bd21]/90">
-              <div className="w-6 h-6 rounded-lg bg-[#e4bd21]/10 flex items-center justify-center text-[#e4bd21]">
+            <div className="flex items-center gap-2 mt-2 text-xs text-[#d5b13a]/90">
+              <div className="w-6 h-6 rounded-lg bg-[#d5b13a]/10 flex items-center justify-center text-[#d5b13a]">
                 <ShieldCheck className="w-3.5 h-3.5" />
               </div>
               <span>100% Strict Developer Confidentiality & Non-Disclosure</span>
@@ -55,14 +55,14 @@ export function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-2">
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-[#e4bd21] mb-4">
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-[#d5b13a] mb-4">
               Navigation
             </h3>
             <ul className="flex flex-col gap-2.5 text-sm">
               <li>
                 <Link
                   href="#services"
-                  className="hover:text-[#e4bd21] transition-colors"
+                  className="hover:text-[#d5b13a] transition-colors"
                 >
                   Services & Framework
                 </Link>
@@ -70,7 +70,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#markets"
-                  className="hover:text-[#e4bd21] transition-colors"
+                  className="hover:text-[#d5b13a] transition-colors"
                 >
                   KDMC Markets
                 </Link>
@@ -78,7 +78,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#why"
-                  className="hover:text-[#e4bd21] transition-colors"
+                  className="hover:text-[#d5b13a] transition-colors"
                 >
                   Why Trident
                 </Link>
@@ -87,7 +87,7 @@ export function Footer() {
                 <li>
                   <Link
                     href="#results"
-                    className="hover:text-[#e4bd21] transition-colors"
+                    className="hover:text-[#d5b13a] transition-colors"
                   >
                     Track Record
                   </Link>
@@ -96,7 +96,7 @@ export function Footer() {
               <li>
                 <Link
                   href="#contact"
-                  className="hover:text-[#e4bd21] transition-colors"
+                  className="hover:text-[#d5b13a] transition-colors"
                 >
                   Book Strategy Audit
                 </Link>
@@ -106,13 +106,13 @@ export function Footer() {
 
           {/* Coverage Areas */}
           <div className="lg:col-span-3">
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-[#e4bd21] mb-4">
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-[#d5b13a] mb-4">
               Coverage Corridors
             </h3>
             <ul className="flex flex-col gap-2.5 text-sm">
               {siteConfig.coverageAreas.map((area) => (
                 <li key={area} className="flex items-center gap-2 text-white/70">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#e4bd21]/70" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#d5b13a]/70" />
                   <span>{area}</span>
                 </li>
               ))}
@@ -121,25 +121,25 @@ export function Footer() {
 
           {/* Contact Details */}
           <div className="lg:col-span-3">
-            <h3 className="text-xs font-semibold uppercase tracking-widest text-[#e4bd21] mb-4">
+            <h3 className="text-xs font-semibold uppercase tracking-widest text-[#d5b13a] mb-4">
               Direct Advisory Desk
             </h3>
             <ul className="flex flex-col gap-3 text-sm">
               <li className="flex items-start gap-3 text-white/70">
-                <div className="w-6 h-6 rounded-md bg-white/5 flex items-center justify-center text-[#e4bd21] shrink-0 mt-0.5">
+                <div className="w-6 h-6 rounded-md bg-white/5 flex items-center justify-center text-[#d5b13a] shrink-0 mt-0.5">
                   <MapPin className="w-3.5 h-3.5" />
                 </div>
                 <span>{siteConfig.address}</span>
               </li>
 
               <li className="flex items-center gap-3 text-white/70">
-                <div className="w-6 h-6 rounded-md bg-white/5 flex items-center justify-center text-[#e4bd21] shrink-0">
+                <div className="w-6 h-6 rounded-md bg-white/5 flex items-center justify-center text-[#d5b13a] shrink-0">
                   <Phone className="w-3.5 h-3.5" />
                 </div>
                 {phoneLink ? (
                   <a
                     href={phoneLink}
-                    className="hover:text-[#e4bd21] transition-colors"
+                    className="hover:text-[#d5b13a] transition-colors"
                   >
                     {siteConfig.phone}
                   </a>
@@ -149,13 +149,13 @@ export function Footer() {
               </li>
 
               <li className="flex items-center gap-3 text-white/70">
-                <div className="w-6 h-6 rounded-md bg-white/5 flex items-center justify-center text-[#e4bd21] shrink-0">
+                <div className="w-6 h-6 rounded-md bg-white/5 flex items-center justify-center text-[#d5b13a] shrink-0">
                   <Mail className="w-3.5 h-3.5" />
                 </div>
                 {!isPlaceholder(siteConfig.email) ? (
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="hover:text-[#e4bd21] transition-colors"
+                    className="hover:text-[#d5b13a] transition-colors"
                   >
                     {siteConfig.email}
                   </a>

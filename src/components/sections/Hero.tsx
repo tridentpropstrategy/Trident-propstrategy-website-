@@ -6,7 +6,6 @@ import { ShieldCheck, Database, Award, ArrowUpRight } from "lucide-react";
 import { stats, hasVerifiedStats } from "@/data/stats";
 import { Button } from "@/components/ui/Button";
 import { GlassCard } from "@/components/ui/GlassCard";
-// import { TridentWatermark } from "@/components/ui/TridentWatermark";
 // import { HeroForm } from "@/components/ui/HeroForm";
 
 export function Hero() {
@@ -29,17 +28,17 @@ export function Hero() {
         aria-hidden="true"
       >
         {/* Ambient Warm Gold Central Spotlight */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[900px] h-[500px] md:h-[700px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#e4bd21]/15 via-[#162740]/40 to-transparent blur-3xl opacity-80" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[900px] h-[500px] md:h-[700px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#d5b13a]/15 via-[#162740]/40 to-transparent blur-3xl opacity-80" />
 
         {/* Concentric Architectural Rings */}
-        <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] md:w-[640px] md:h-[640px] rounded-full border border-[#e4bd21]/15" />
-        <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[440px] md:h-[440px] rounded-full border border-[#e4bd21]/20 border-dashed" />
+        <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] md:w-[640px] md:h-[640px] rounded-full border border-[#d5b13a]/15" />
+        <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[440px] md:h-[440px] rounded-full border border-[#d5b13a]/20 border-dashed" />
 
         {/* Vertical Center Axis / Apex Guide */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-[520px] bg-gradient-to-b from-[#e4bd21]/0 via-[#e4bd21]/20 to-transparent" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-[520px] bg-gradient-to-b from-[#d5b13a]/0 via-[#d5b13a]/20 to-transparent" />
 
         {/* Trident Emblem Watermark */}
-        {/* <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[420px] md:w-[500px] lg:w-[560px] opacity-30 md:opacity-35 drop-shadow-[0_0_35px_rgba(228,189,33,0.25)] transition-opacity duration-700">
+        {/* <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[420px] md:w-[500px] lg:w-[560px] opacity-30 md:opacity-35 drop-shadow-[0_0_35px_rgba(213,177,58,0.25)] transition-opacity duration-700">
           <TridentWatermark className="w-full h-auto" />
         </div> */}
 
@@ -54,10 +53,10 @@ export function Hero() {
             initial={shouldReduceMotion ? false : { opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#e4bd21]/10 border border-[#e4bd21]/30 mb-6"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#d5b13a]/10 border border-[#d5b13a]/30 mb-6"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-[#e4bd21] animate-pulse" />
-            <span className="eyebrow">Sales strategy for KDMC developers</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#d5b13a] animate-pulse" />
+            <span className="eyebrow">Mandate Strategy & Sales Acceleration Platform</span>
           </motion.div>
 
           {/* H1 Headline */}
@@ -70,7 +69,7 @@ export function Hero() {
             {headlineParts.map((part, idx) => (
               <span
                 key={idx}
-                className={part.isGold ? "text-[#e4bd21] italic" : "text-white"}
+                className={part.isGold ? "text-gold-gradient italic" : "text-white"}
               >
                 {part.text}
               </span>
@@ -82,7 +81,7 @@ export function Hero() {
             initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
-            className="text-[#e4bd21] font-serif text-lg sm:text-xl md:text-2xl font-medium tracking-wide mb-6 max-w-2xl leading-snug"
+            className="text-gold-gradient font-serif text-lg sm:text-xl md:text-2xl font-medium tracking-wide mb-6 max-w-2xl leading-snug"
           >
             The Growth Engine for Suburban Real Estate Mandates & Sales Execution
           </motion.p>
@@ -122,21 +121,21 @@ export function Hero() {
             className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-xl w-full border-t border-white/10 pt-6 justify-items-center"
           >
             <div className="flex items-center gap-2.5 text-xs text-white/80">
-              <div className="w-7 h-7 rounded-lg bg-[#e4bd21]/15 border border-[#e4bd21]/30 flex items-center justify-center text-[#e4bd21] shrink-0">
+              <div className="w-7 h-7 rounded-lg bg-[#d5b13a]/15 border border-[#d5b13a]/30 flex items-center justify-center text-[#d5b13a] shrink-0">
                 <ShieldCheck className="w-4 h-4" />
               </div>
               <span className="font-medium">Strict NDA</span>
             </div>
 
             <div className="flex items-center gap-2.5 text-xs text-white/80">
-              <div className="w-7 h-7 rounded-lg bg-[#e4bd21]/15 border border-[#e4bd21]/30 flex items-center justify-center text-[#e4bd21] shrink-0">
+              <div className="w-7 h-7 rounded-lg bg-[#d5b13a]/15 border border-[#d5b13a]/30 flex items-center justify-center text-[#d5b13a] shrink-0">
                 <Database className="w-4 h-4" />
               </div>
               <span className="font-medium">Hyper-local Data</span>
             </div>
 
             <div className="flex items-center gap-2.5 text-xs text-white/80">
-              <div className="w-7 h-7 rounded-lg bg-[#e4bd21]/15 border border-[#e4bd21]/30 flex items-center justify-center text-[#e4bd21] shrink-0">
+              <div className="w-7 h-7 rounded-lg bg-[#d5b13a]/15 border border-[#d5b13a]/30 flex items-center justify-center text-[#d5b13a] shrink-0">
                 <Award className="w-4 h-4" />
               </div>
               <span className="font-medium">Zero Generic Advice</span>
@@ -153,7 +152,7 @@ export function Hero() {
             >
               {stats.map((st, idx) => (
                 <GlassCard key={idx} variant="subtle" className="p-4 text-center">
-                  <div className="font-serif text-2xl font-bold text-[#e4bd21] mb-1">
+                  <div className="font-serif text-2xl font-bold text-gold-gradient mb-1">
                     {st.value}
                   </div>
                   <div className="text-xs text-white/75 font-medium leading-tight">

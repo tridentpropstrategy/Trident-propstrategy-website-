@@ -36,13 +36,13 @@ export function Contact() {
             <div className="block md:hidden mt-8">
               <Reveal delay={0.1}>
                 <div className="glass p-6 rounded-[20px] border border-white/10 space-y-4">
-                  <h3 className="text-xs uppercase font-semibold tracking-wider text-[#e4bd21]">
+                  <h3 className="text-xs uppercase font-semibold tracking-wider text-[#d5b13a]">
                     Direct Advisory Desk
                   </h3>
                   <div className="space-y-3">
                     <a
                       href={phoneHref}
-                      className="w-full flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl border border-[#e4bd21] text-[#e4bd21] hover:bg-[#e4bd21]/10 font-semibold text-sm transition-all"
+                      className="w-full flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl border border-[#d5b13a] text-[#d5b13a] hover:bg-[#d5b13a]/10 font-semibold text-sm transition-all"
                     >
                       <Phone className="w-4 h-4" />
                       <span>Call {siteConfig.phone}</span>
@@ -52,9 +52,9 @@ export function Contact() {
                       href={waHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl border border-[#e4bd21] text-white hover:border-[#e4bd21] hover:text-[#e4bd21] glass font-semibold text-sm transition-all"
+                      className="w-full flex items-center justify-center gap-2.5 py-3.5 px-4 rounded-xl border border-[#d5b13a] text-white hover:border-[#d5b13a] hover:text-[#d5b13a] glass font-semibold text-sm transition-all"
                     >
-                      <MessageSquare className="w-4 h-4 text-[#e4bd21]" />
+                      <MessageSquare className="w-4 h-4 text-[#d5b13a]" />
                       <span>Chat on WhatsApp</span>
                     </a>
                   </div>

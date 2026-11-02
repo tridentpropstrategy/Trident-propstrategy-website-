@@ -80,10 +80,10 @@ export function HeroForm() {
   if (status === "success") {
     return (
       <div className="glass-strong hero-card-shimmer p-6 sm:p-8 rounded-[20px] text-center flex flex-col items-center justify-center min-h-[360px]">
-        <div className="w-14 h-14 rounded-2xl bg-[#e4bd21]/20 border border-[#e4bd21]/40 flex items-center justify-center text-[#e4bd21] mb-5 shadow-[0_0_24px_rgba(228,189,33,0.3)]">
+        <div className="w-14 h-14 rounded-2xl bg-[#d5b13a]/20 border border-[#d5b13a]/40 flex items-center justify-center text-[#d5b13a] mb-5 shadow-[0_0_24px_rgba(213,177,58,0.3)]">
           <CheckCircle2 className="w-8 h-8" />
         </div>
-        <h3 className="font-serif text-xl sm:text-2xl text-[#e4bd21] font-semibold mb-2">
+        <h3 className="font-serif text-xl sm:text-2xl text-[#d5b13a] font-semibold mb-2">
           Audit Request Received
         </h3>
         <p className="text-sm sm:text-base text-white/80 max-w-xs leading-relaxed mb-6">
@@ -98,7 +98,7 @@ export function HeroForm() {
             setIsSubmitted(false);
             setStatus("idle");
           }}
-          className="text-xs text-[#e4bd21] hover:underline underline-offset-4 font-medium"
+          className="text-xs text-[#d5b13a] hover:underline underline-offset-4 font-medium"
         >
           Send another request
         </button>
@@ -109,7 +109,7 @@ export function HeroForm() {
   return (
     <div className="glass-strong hero-card-shimmer p-6 sm:p-8 rounded-[20px] relative">
       <div className="mb-6">
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#e4bd21]/15 text-[#e4bd21] text-[11px] font-semibold tracking-wider uppercase mb-2">
+        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#d5b13a]/15 text-[#d5b13a] text-[11px] font-semibold tracking-wider uppercase mb-2">
           <Lock className="w-3 h-3" />
           <span>Confidential Audit</span>
         </div>
@@ -137,7 +137,7 @@ export function HeroForm() {
         {/* Name */}
         <div>
           <label htmlFor="hero-name" className="block text-xs font-medium text-white/90 mb-1.5">
-            Developer / Contact Name <span className="text-[#e4bd21]">*</span>
+            Developer / Contact Name <span className="text-[#d5b13a]">*</span>
           </label>
           <input
             id="hero-name"
@@ -148,10 +148,10 @@ export function HeroForm() {
             onBlur={() => handleBlur("name")}
             disabled={status === "submitting"}
             placeholder="e.g. Rajesh Patil"
-            className="w-full px-3.5 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#e4bd21] focus:ring-1 focus:ring-[#e4bd21] transition-all"
+            className="w-full px-3.5 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#d5b13a] focus:ring-1 focus:ring-[#d5b13a] transition-all"
           />
           {shouldShowError("name") && (
-            <p className="mt-1.5 flex items-center gap-1.5 text-xs text-[#e4bd21]">
+            <p className="mt-1.5 flex items-center gap-1.5 text-xs text-[#d5b13a]">
               <AlertCircle className="w-3.5 h-3.5 shrink-0" />
               <span>{errors.name}</span>
             </p>
@@ -161,7 +161,7 @@ export function HeroForm() {
         {/* Phone / WhatsApp */}
         <div>
           <label htmlFor="hero-phone" className="block text-xs font-medium text-white/90 mb-1.5">
-            Phone / WhatsApp <span className="text-[#e4bd21]">*</span>
+            Phone / WhatsApp <span className="text-[#d5b13a]">*</span>
           </label>
           <input
             id="hero-phone"
@@ -173,10 +173,10 @@ export function HeroForm() {
             onBlur={() => handleBlur("phone")}
             disabled={status === "submitting"}
             placeholder="+91 98XXX XXXXX"
-            className="w-full px-3.5 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#e4bd21] focus:ring-1 focus:ring-[#e4bd21] transition-all"
+            className="w-full px-3.5 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#d5b13a] focus:ring-1 focus:ring-[#d5b13a] transition-all"
           />
           {shouldShowError("phone") && (
-            <p className="mt-1.5 flex items-center gap-1.5 text-xs text-[#e4bd21]">
+            <p className="mt-1.5 flex items-center gap-1.5 text-xs text-[#d5b13a]">
               <AlertCircle className="w-3.5 h-3.5 shrink-0" />
               <span>{errors.phone}</span>
             </p>
@@ -186,7 +186,7 @@ export function HeroForm() {
         {/* Project / Firm Name */}
         <div>
           <label htmlFor="hero-project" className="block text-xs font-medium text-white/90 mb-1.5">
-            Project / Firm Name <span className="text-[#e4bd21]">*</span>
+            Project / Firm Name <span className="text-[#d5b13a]">*</span>
           </label>
           <input
             id="hero-project"
@@ -197,10 +197,10 @@ export function HeroForm() {
             onBlur={() => handleBlur("project")}
             disabled={status === "submitting"}
             placeholder="e.g. Apex Heights / Trident Infra"
-            className="w-full px-3.5 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#e4bd21] focus:ring-1 focus:ring-[#e4bd21] transition-all"
+            className="w-full px-3.5 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#d5b13a] focus:ring-1 focus:ring-[#d5b13a] transition-all"
           />
           {shouldShowError("project") && (
-            <p className="mt-1.5 flex items-center gap-1.5 text-xs text-[#e4bd21]">
+            <p className="mt-1.5 flex items-center gap-1.5 text-xs text-[#d5b13a]">
               <AlertCircle className="w-3.5 h-3.5 shrink-0" />
               <span>{errors.project}</span>
             </p>
@@ -208,9 +208,9 @@ export function HeroForm() {
         </div>
 
         {status === "error" && (
-          <div className="p-3 rounded-xl bg-[#e4bd21]/15 border border-[#e4bd21]/30 text-xs text-white">
+          <div className="p-3 rounded-xl bg-[#d5b13a]/15 border border-[#d5b13a]/30 text-xs text-white">
             <p className="flex items-start gap-2">
-              <AlertCircle className="w-4 h-4 text-[#e4bd21] shrink-0 mt-0.5" />
+              <AlertCircle className="w-4 h-4 text-[#d5b13a] shrink-0 mt-0.5" />
               <span>{errorMessage}</span>
             </p>
           </div>
@@ -219,7 +219,7 @@ export function HeroForm() {
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="w-full min-h-[48px] py-3.5 px-6 rounded-xl bg-[#e4bd21] text-[#162740] font-semibold text-sm shadow-[0_4px_20px_rgba(228,189,33,0.25)] hover:shadow-[0_0_0_1px_#e4bd21,0_10px_40px_rgba(228,189,33,0.35)] hover:scale-[1.01] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+          className="w-full min-h-[48px] py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#e4c760] via-[#d5b13a] to-[#bd9424] text-[#162740] font-bold text-sm shadow-[0_4px_20px_rgba(213,177,58,0.3),inset_0_1px_1px_rgba(255,255,255,0.4)] hover:shadow-[0_0_0_1px_#d5b13a,0_10px_40px_rgba(213,177,58,0.4)] hover:scale-[1.01] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {status === "submitting" ? (
             <>

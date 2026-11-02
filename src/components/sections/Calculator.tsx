@@ -119,15 +119,15 @@ export function Calculator() {
             <GlassCard
               variant="standard"
               highlightOnHover={false}
-              className="p-6 sm:p-8 flex flex-col justify-between h-full border-[#e4bd21]/20 rounded-[20px]"
+              className="p-6 sm:p-8 flex flex-col justify-between h-full border-[#d5b13a]/20 rounded-[20px]"
             >
               <div>
                 {/* Card Header */}
                 <div className="flex items-center gap-3 mb-8">
-                  <div className="w-9 h-9 rounded-lg bg-[#e4bd21]/15 border border-[#e4bd21]/30 flex items-center justify-center text-[#e4bd21] shrink-0">
+                  <div className="w-9 h-9 rounded-lg bg-[#d5b13a]/15 border border-[#d5b13a]/30 flex items-center justify-center text-[#d5b13a] shrink-0">
                     <SlidersHorizontal className="w-4 h-4" />
                   </div>
-                  <h3 className="text-xs uppercase tracking-[0.16em] font-semibold text-[#e4bd21]">
+                  <h3 className="text-xs uppercase tracking-[0.16em] font-semibold text-[#d5b13a]">
                     Project parameters
                   </h3>
                 </div>
@@ -143,7 +143,7 @@ export function Calculator() {
                       >
                         {SLIDER_CONFIGS.units.label}:
                       </label>
-                      <span className="text-sm font-semibold text-[#e4bd21] font-sans">
+                      <span className="text-sm font-semibold text-[#d5b13a] font-sans">
                         {units} Units
                       </span>
                     </div>
@@ -178,7 +178,7 @@ export function Calculator() {
                       >
                         {SLIDER_CONFIGS.price.label}:
                       </label>
-                      <span className="text-sm font-semibold text-[#e4bd21] font-sans">
+                      <span className="text-sm font-semibold text-[#d5b13a] font-sans">
                         ₹ {price} Lakhs
                       </span>
                     </div>
@@ -213,7 +213,7 @@ export function Calculator() {
                       >
                         {SLIDER_CONFIGS.rate.label}:
                       </label>
-                      <span className="text-sm font-semibold text-[#e4bd21] font-sans">
+                      <span className="text-sm font-semibold text-[#d5b13a] font-sans">
                         {rate % 1 === 0 ? rate : rate.toFixed(1)} Units / Mo
                       </span>
                     </div>
@@ -242,8 +242,8 @@ export function Calculator() {
               </div>
 
               {/* Info Note */}
-              <div className="p-4 rounded-xl bg-white/[0.04] border border-[#e4bd21]/20 flex items-start gap-3 mt-8">
-                <div className="w-5 h-5 rounded-md bg-[#e4bd21]/15 flex items-center justify-center text-[#e4bd21] shrink-0 mt-0.5">
+              <div className="p-4 rounded-xl bg-white/[0.04] border border-[#d5b13a]/20 flex items-start gap-3 mt-8">
+                <div className="w-5 h-5 rounded-md bg-[#d5b13a]/15 flex items-center justify-center text-[#d5b13a] shrink-0 mt-0.5">
                   <Info className="w-3.5 h-3.5" />
                 </div>
                 <p className="text-xs leading-relaxed text-white/75 font-sans">
@@ -258,7 +258,7 @@ export function Calculator() {
             <GlassCard
               variant="strong"
               highlightOnHover={false}
-              className="p-6 sm:p-8 flex flex-col justify-between h-full border-[#e4bd21]/30 rounded-[20px]"
+              className="p-6 sm:p-8 flex flex-col justify-between h-full border-[#d5b13a]/30 rounded-[20px]"
             >
               {/* Screen reader live status announcement */}
               <div role="status" aria-live="polite" className="sr-only">
@@ -271,8 +271,8 @@ export function Calculator() {
                   <span className="text-xs uppercase tracking-[0.16em] font-semibold text-white/80">
                     Recovery simulation
                   </span>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#e4bd21]/15 border border-[#e4bd21]/35 text-[#e4bd21] text-xs font-semibold">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#e4bd21] animate-pulse" />
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#d5b13a]/15 border border-[#d5b13a]/35 text-[#d5b13a] text-xs font-semibold">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#d5b13a] animate-pulse" />
                     <span>Trident acceleration active</span>
                   </div>
                 </div>
@@ -299,8 +299,8 @@ export function Calculator() {
                   </div>
 
                   {/* Stat Tile 2: Turnaround Time Saved */}
-                  <div className="p-5 rounded-xl bg-[#e4bd21]/[0.07] border border-[#e4bd21]/25 flex flex-col justify-between">
-                    <span className="text-[11px] uppercase tracking-wider text-[#e4bd21]/80 font-medium">
+                  <div className="p-5 rounded-xl bg-[#d5b13a]/[0.08] border border-[#d5b13a]/25 flex flex-col justify-between">
+                    <span className="text-[11px] uppercase tracking-wider text-[#d5b13a]/80 font-medium">
                       Turnaround time saved
                     </span>
                     <motion.div
@@ -308,11 +308,11 @@ export function Calculator() {
                       initial={shouldReduceMotion ? false : { opacity: 0.6, y: -4 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.35, ease: "easeOut" }}
-                      className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#e4bd21] my-1 tracking-tight"
+                      className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-gold-gradient my-1 tracking-tight"
                     >
                       {results.monthsSavedDisplay}
                     </motion.div>
-                    <span className="text-xs text-[#e4bd21]/80 font-medium">
+                    <span className="text-xs text-[#d5b13a]/80 font-medium">
                       Faster full inventory sell-out
                     </span>
                   </div>
@@ -333,7 +333,7 @@ export function Calculator() {
                           : { scale: [1, 1.07, 1] }
                       }
                       transition={{ duration: 0.35, ease: "easeInOut" }}
-                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#e4bd21]/15 border border-[#e4bd21]/30 text-[#e4bd21] text-xs font-bold tracking-wide"
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#d5b13a]/15 border border-[#d5b13a]/30 text-[#d5b13a] text-xs font-bold tracking-wide"
                     >
                       <TrendingUp className="w-3.5 h-3.5" />
                       <span>{BOOST_FACTOR}.0x velocity</span>
@@ -366,10 +366,10 @@ export function Calculator() {
                     {/* Bar 2: With Trident mandate and CP network */}
                     <div>
                       <div className="flex items-center justify-between text-xs mb-1.5">
-                        <span className="font-medium text-[#e4bd21]">
+                        <span className="font-medium text-[#d5b13a]">
                           With Trident mandate and CP network
                         </span>
-                        <span className="font-bold text-[#e4bd21]">
+                        <span className="font-bold text-[#d5b13a]">
                           {results.monthsWithDisplay}
                         </span>
                       </div>
@@ -381,7 +381,7 @@ export function Calculator() {
                           }}
                           transition={{ duration: 0.5, ease: "easeOut" }}
                           style={{ transformOrigin: "left" }}
-                          className="w-full h-full rounded-full bg-gradient-to-r from-[#c39e2f] to-[#e4bd21] shadow-[0_0_12px_rgba(228,189,33,0.35)]"
+                          className="w-full h-full rounded-full bg-gradient-to-r from-[#e4c760] via-[#d5b13a] to-[#bd9424] shadow-[0_0_12px_rgba(213,177,58,0.35)]"
                         />
                       </div>
                     </div>
@@ -399,7 +399,7 @@ export function Calculator() {
                   size="lg"
                   href="#contact"
                   onClick={handleCtaClick}
-                  className="w-full sm:w-auto shadow-[0_4px_24px_rgba(228,189,33,0.35)]"
+                  className="w-full sm:w-auto shadow-[0_4px_24px_rgba(213,177,58,0.35)]"
                 >
                   <span>Request Confidential Audit</span>
                   <ArrowUpRight className="w-4 h-4 ml-1" />

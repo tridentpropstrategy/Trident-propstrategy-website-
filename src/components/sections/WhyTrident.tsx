@@ -56,8 +56,8 @@ export function WhyTrident() {
                 <ShieldAlert className="w-4 h-4 text-white/40" />
                 <span>Traditional Brokerage</span>
               </div>
-              <div className="col-span-4 p-5 text-[#e4bd21] bg-[#e4bd21]/[0.09] border-l border-[#e4bd21]/30 flex items-center gap-2">
-                <Award className="w-4 h-4 text-[#e4bd21]" />
+              <div className="col-span-4 p-5 text-[#d5b13a] bg-[#d5b13a]/[0.09] border-l border-[#d5b13a]/30 flex items-center gap-2">
+                <Award className="w-4 h-4 text-[#d5b13a]" />
                 <span>Trident Prop Strategy</span>
               </div>
             </div>
@@ -82,8 +82,8 @@ export function WhyTrident() {
                   </div>
 
                   {/* Trident (Tinted gold at 9%) */}
-                  <div className="col-span-4 p-5 text-white font-medium bg-[#e4bd21]/[0.09] border-l border-[#e4bd21]/30 flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-[#e4bd21]/20 flex items-center justify-center text-[#e4bd21] shrink-0">
+                  <div className="col-span-4 p-5 text-white font-medium bg-[#d5b13a]/[0.09] border-l border-[#d5b13a]/30 flex items-center gap-3">
+                    <div className="w-5 h-5 rounded-full bg-[#d5b13a]/20 flex items-center justify-center text-[#d5b13a] shrink-0">
                       <Check className="w-3.5 h-3.5" />
                     </div>
                     <span>{row.trident}</span>
@@ -100,7 +100,7 @@ export function WhyTrident() {
             {comparisons.map((row, idx) => (
               <RevealItem key={idx}>
                 <GlassCard className="p-5 border-white/10">
-                  <h3 className="text-xs uppercase font-semibold tracking-wider text-[#e4bd21] mb-3">
+                  <h3 className="text-xs uppercase font-semibold tracking-wider text-[#d5b13a] mb-3">
                     {row.dimension}
                   </h3>
 
@@ -121,12 +121,12 @@ export function WhyTrident() {
                     </div>
 
                     {/* Trident Row */}
-                    <div className="p-3 rounded-xl bg-[#e4bd21]/[0.09] border border-[#e4bd21]/30 flex items-start gap-2.5">
-                      <div className="w-5 h-5 rounded-full bg-[#e4bd21]/20 flex items-center justify-center text-[#e4bd21] shrink-0 mt-0.5">
+                    <div className="p-3 rounded-xl bg-[#d5b13a]/[0.09] border border-[#d5b13a]/30 flex items-start gap-2.5">
+                      <div className="w-5 h-5 rounded-full bg-[#d5b13a]/20 flex items-center justify-center text-[#d5b13a] shrink-0 mt-0.5">
                         <Check className="w-3 h-3" />
                       </div>
                       <div>
-                        <span className="block text-[11px] text-[#e4bd21] font-semibold uppercase tracking-wide">
+                        <span className="block text-[11px] text-[#d5b13a] font-semibold uppercase tracking-wide">
                           Trident Prop Strategy
                         </span>
                         <span className="text-xs text-white font-medium">

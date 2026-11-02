@@ -37,11 +37,11 @@ export function WhatsAppFloat() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat with us on WhatsApp"
-        className="group relative flex items-center h-14 rounded-full bg-[#e4bd21] text-[#162740] shadow-[0_4px_24px_rgba(0,0,0,0.35)] hover:shadow-[0_0_28px_rgba(228,189,33,0.55)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#e4bd21] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111d30] transition-all duration-300 ease-out"
+        className="group relative flex items-center h-14 rounded-full bg-gradient-to-r from-[#e4c760] via-[#d5b13a] to-[#bd9424] text-[#162740] shadow-[0_4px_24px_rgba(0,0,0,0.35),inset_0_1px_1px_rgba(255,255,255,0.4)] hover:shadow-[0_0_28px_rgba(213,177,58,0.55)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d5b13a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111d30] transition-all duration-300 ease-out"
       >
         {/* Soft pulsing ring - disabled under reduced motion */}
         <span
-          className="animate-pulse-ring absolute inset-0 rounded-full bg-[#e4bd21] pointer-events-none -z-10"
+          className="animate-pulse-ring absolute inset-0 rounded-full bg-[#d5b13a] pointer-events-none -z-10"
           aria-hidden="true"
         />
 

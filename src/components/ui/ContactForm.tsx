@@ -174,18 +174,18 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="glass-strong p-8 sm:p-12 rounded-[20px] text-center flex flex-col items-center justify-center min-h-[460px] border border-[#e4bd21]/40 shadow-2xl">
-        <div className="w-16 h-16 rounded-2xl bg-[#e4bd21]/20 border border-[#e4bd21]/40 flex items-center justify-center text-[#e4bd21] mb-6 shadow-[0_0_32px_rgba(228,189,33,0.35)]">
+      <div className="glass-strong p-8 sm:p-12 rounded-[20px] text-center flex flex-col items-center justify-center min-h-[460px] border border-[#d5b13a]/40 shadow-2xl">
+        <div className="w-16 h-16 rounded-2xl bg-[#d5b13a]/20 border border-[#d5b13a]/40 flex items-center justify-center text-[#d5b13a] mb-6 shadow-[0_0_32px_rgba(213,177,58,0.35)]">
           <CheckCircle2 className="w-10 h-10" />
         </div>
-        <h3 className="font-serif text-2xl sm:text-3xl text-[#e4bd21] font-semibold mb-3">
+        <h3 className="font-serif text-2xl sm:text-3xl text-[#d5b13a] font-semibold mb-3">
           Audit Request Confirmed
         </h3>
         <p className="text-white/80 text-sm sm:text-base max-w-md leading-relaxed mb-8">
           Thank you. Our KDMC advisory team will review your project parameters and contact you within 24 hours under strict NDA.
         </p>
         <div className="flex items-center gap-2 text-xs text-white/60 mb-6">
-          <ShieldCheck className="w-4 h-4 text-[#e4bd21]" />
+          <ShieldCheck className="w-4 h-4 text-[#d5b13a]" />
           <span>Non-Disclosure Agreement in Effect</span>
         </div>
         <button
@@ -206,7 +206,7 @@ export function ContactForm() {
             setIsSubmitted(false);
             setStatus("idle");
           }}
-          className="text-xs text-[#e4bd21] hover:underline underline-offset-4 font-semibold uppercase tracking-wider"
+          className="text-xs text-[#d5b13a] hover:underline underline-offset-4 font-semibold uppercase tracking-wider"
         >
           Send another request
         </button>
@@ -215,10 +215,10 @@ export function ContactForm() {
   }
 
   return (
-    <div className="glass-strong p-6 sm:p-10 rounded-[20px] border border-[#e4bd21]/30 shadow-2xl relative">
+    <div className="glass-strong p-6 sm:p-10 rounded-[20px] border border-[#d5b13a]/30 shadow-2xl relative">
       <div className="mb-8">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#e4bd21]/15 border border-[#e4bd21]/30 mb-3">
-          <Lock className="w-3.5 h-3.5 text-[#e4bd21]" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#d5b13a]/15 border border-[#d5b13a]/30 mb-3">
+          <Lock className="w-3.5 h-3.5 text-[#d5b13a]" />
           <span className="eyebrow !text-[11px]">Developer Confidential Mandate</span>
         </div>
         <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-white">
@@ -246,7 +246,7 @@ export function ContactForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
             <label htmlFor="contact-name" className="block text-xs font-medium text-white/90 mb-1.5">
-              Developer / Contact Name <span className="text-[#e4bd21]">*</span>
+              Developer / Contact Name <span className="text-[#d5b13a]">*</span>
             </label>
             <input
               id="contact-name"
@@ -257,10 +257,10 @@ export function ContactForm() {
               onBlur={() => handleBlur("name")}
               disabled={status === "submitting"}
               placeholder="e.g. Ramesh Deshmukh"
-              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#e4bd21] focus:ring-1 focus:ring-[#e4bd21] transition-all"
+              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#d5b13a] focus:ring-1 focus:ring-[#d5b13a] transition-all"
             />
             {shouldShowError("name") && (
-              <p className="mt-1.5 flex items-center gap-1.5 text-xs text-[#e4bd21]">
+              <p className="mt-1.5 flex items-center gap-1.5 text-xs text-[#d5b13a]">
                 <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                 <span>{errors.name}</span>
               </p>
@@ -269,7 +269,7 @@ export function ContactForm() {
 
           <div>
             <label htmlFor="contact-phone" className="block text-xs font-medium text-white/90 mb-1.5">
-              Phone / WhatsApp <span className="text-[#e4bd21]">*</span>
+              Phone / WhatsApp <span className="text-[#d5b13a]">*</span>
             </label>
             <input
               id="contact-phone"
@@ -281,10 +281,10 @@ export function ContactForm() {
               onBlur={() => handleBlur("phone")}
               disabled={status === "submitting"}
               placeholder="+91 98XXX XXXXX"
-              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#e4bd21] focus:ring-1 focus:ring-[#e4bd21] transition-all"
+              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#d5b13a] focus:ring-1 focus:ring-[#d5b13a] transition-all"
             />
             {shouldShowError("phone") && (
-              <p className="mt-1.5 flex items-center gap-1.5 text-xs text-[#e4bd21]">
+              <p className="mt-1.5 flex items-center gap-1.5 text-xs text-[#d5b13a]">
                 <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                 <span>{errors.phone}</span>
               </p>
@@ -296,7 +296,7 @@ export function ContactForm() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
             <label htmlFor="contact-project" className="block text-xs font-medium text-white/90 mb-1.5">
-              Project / Firm Name <span className="text-[#e4bd21]">*</span>
+              Project / Firm Name <span className="text-[#d5b13a]">*</span>
             </label>
             <input
               id="contact-project"
@@ -307,10 +307,10 @@ export function ContactForm() {
               onBlur={() => handleBlur("project")}
               disabled={status === "submitting"}
               placeholder="e.g. Shivam Enclave / Sterling Group"
-              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#e4bd21] focus:ring-1 focus:ring-[#e4bd21] transition-all"
+              className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#d5b13a] focus:ring-1 focus:ring-[#d5b13a] transition-all"
             />
             {shouldShowError("project") && (
-              <p className="mt-1.5 flex items-center gap-1.5 text-xs text-[#e4bd21]">
+              <p className="mt-1.5 flex items-center gap-1.5 text-xs text-[#d5b13a]">
                 <AlertCircle className="w-3.5 h-3.5 shrink-0" />
                 <span>{errors.project}</span>
               </p>
@@ -383,14 +383,14 @@ export function ContactForm() {
             disabled={status === "submitting"}
             maxLength={1000}
             placeholder="Briefly describe your project configuration, ticket size, or specific walk-in conversion hurdles..."
-            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#e4bd21] focus:ring-1 focus:ring-[#e4bd21] transition-all resize-none"
+            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 text-white placeholder-white/35 text-base focus:border-[#d5b13a] focus:ring-1 focus:ring-[#d5b13a] transition-all resize-none"
           />
         </div>
 
         {status === "error" && (
-          <div className="p-4 rounded-xl bg-[#e4bd21]/15 border border-[#e4bd21]/30 text-xs text-white">
+          <div className="p-4 rounded-xl bg-[#d5b13a]/15 border border-[#d5b13a]/30 text-xs text-white">
             <p className="flex items-start gap-2">
-              <AlertCircle className="w-4 h-4 text-[#e4bd21] shrink-0 mt-0.5" />
+              <AlertCircle className="w-4 h-4 text-[#d5b13a] shrink-0 mt-0.5" />
               <span>{errorMessage}</span>
             </p>
           </div>
@@ -401,7 +401,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="w-full min-h-[52px] py-4 px-8 rounded-xl bg-[#e4bd21] text-[#162740] font-bold text-sm sm:text-base tracking-wide shadow-[0_4px_24px_rgba(228,189,33,0.3)] hover:shadow-[0_0_0_1px_#e4bd21,0_10px_40px_rgba(228,189,33,0.4)] hover:scale-[1.01] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
+            className="w-full min-h-[52px] py-4 px-8 rounded-xl bg-gradient-to-r from-[#e4c760] via-[#d5b13a] to-[#bd9424] text-[#162740] font-bold text-sm sm:text-base tracking-wide shadow-[0_4px_24px_rgba(213,177,58,0.35),inset_0_1px_1px_rgba(255,255,255,0.4)] hover:shadow-[0_0_0_1px_#d5b13a,0_10px_40px_rgba(213,177,58,0.45)] hover:scale-[1.01] active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-60 disabled:cursor-not-allowed"
           >
             {status === "submitting" ? (
               <>

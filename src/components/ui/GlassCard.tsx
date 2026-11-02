@@ -48,7 +48,7 @@ export function GlassCard({
         variantClass,
         "relative overflow-hidden transition-all duration-300",
         highlightOnHover &&
-          "hover:-translate-y-1 hover:border-[#e4bd21]/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.35),0_0_24px_rgba(228,189,33,0.12)]",
+          "hover:-translate-y-1 hover:border-[#d5b13a]/50 hover:shadow-[0_12px_40px_rgba(0,0,0,0.35),0_0_24px_rgba(213,177,58,0.15)]",
         className
       )}
       {...props}
@@ -58,7 +58,7 @@ export function GlassCard({
         <div
           className="pointer-events-none absolute -inset-px opacity-0 hover:opacity-100 transition-opacity duration-300 hidden md:block"
           style={{
-            background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, rgba(228, 189, 33, 0.08), transparent 80%)`,
+            background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, rgba(213, 177, 58, 0.08), transparent 80%)`,
           }}
           aria-hidden="true"
         />

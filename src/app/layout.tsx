@@ -123,10 +123,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[#162740] text-white font-sans antialiased selection:bg-[#e4bd21] selection:text-[#162740]">
+      <body className="min-h-screen bg-[#162740] text-white font-sans antialiased selection:bg-[#d5b13a] selection:text-[#162740]">
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#e4bd21] focus:text-[#162740] focus:font-semibold focus:rounded-lg focus:shadow-lg"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#d5b13a] focus:text-[#162740] focus:font-semibold focus:rounded-lg focus:shadow-lg"
         >
           Skip to main content
         </a>

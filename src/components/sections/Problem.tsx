@@ -46,14 +46,14 @@ export function Problem() {
             const Icon = item.icon;
             return (
               <RevealItem key={idx}>
-                <GlassCard className="p-8 flex flex-col justify-between h-full border-white/10 hover:border-[#e4bd21]/40">
+                <GlassCard className="p-8 flex flex-col justify-between h-full border-white/10 hover:border-[#d5b13a]/40">
                   <div>
                     <div className="flex items-center justify-between mb-6">
-                      <div className="w-12 h-12 rounded-xl bg-[#e4bd21]/10 border border-[#e4bd21]/20 flex items-center justify-center text-[#e4bd21]">
+                      <div className="w-12 h-12 rounded-xl bg-[#d5b13a]/10 border border-[#d5b13a]/20 flex items-center justify-center text-[#d5b13a]">
                         <Icon className="w-6 h-6" />
                       </div>
                       <span className="text-[11px] font-semibold tracking-wider uppercase text-white/50 px-2.5 py-1 rounded-md bg-white/5 border border-white/10 flex items-center gap-1.5">
-                        <AlertTriangle className="w-3 h-3 text-[#e4bd21]" />
+                        <AlertTriangle className="w-3 h-3 text-[#d5b13a]" />
                         {item.metric}
                       </span>
                     </div>
@@ -69,7 +69,7 @@ export function Problem() {
 
                   <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-xs text-white/50">
                     <span>Liability Factor 0{idx + 1}</span>
-                    <span className="text-[#e4bd21]/80">Trident Solution Ready →</span>
+                    <span className="text-[#d5b13a]/80">Trident Solution Ready →</span>
                   </div>
                 </GlassCard>
               </RevealItem>
