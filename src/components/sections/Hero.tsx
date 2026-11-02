@@ -6,6 +6,7 @@ import { ShieldCheck, Database, Award, ArrowUpRight } from "lucide-react";
 import { stats, hasVerifiedStats } from "@/data/stats";
 import { Button } from "@/components/ui/Button";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { TridentWatermark } from "@/components/ui/TridentWatermark";
 // import { HeroForm } from "@/components/ui/HeroForm";
 
 export function Hero() {
@@ -22,11 +23,29 @@ export function Hero() {
       id="top"
       className="relative pt-12 pb-20 md:pt-16 md:pb-28 overflow-hidden"
     >
-      {/* Hero Grid Pattern Mask */}
+      {/* Background Decorative Layer & Trident Watermark */}
       <div
-        className="absolute inset-0 hero-grid-pattern pointer-events-none z-0"
+        className="absolute inset-0 pointer-events-none select-none z-0 overflow-hidden"
         aria-hidden="true"
-      />
+      >
+        {/* Ambient Warm Gold Central Spotlight */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[900px] h-[500px] md:h-[700px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#e4bd21]/15 via-[#162740]/40 to-transparent blur-3xl opacity-80" />
+
+        {/* Concentric Architectural Rings */}
+        <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] md:w-[640px] md:h-[640px] rounded-full border border-[#e4bd21]/15" />
+        <div className="absolute top-[42%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] md:w-[440px] md:h-[440px] rounded-full border border-[#e4bd21]/20 border-dashed" />
+
+        {/* Vertical Center Axis / Apex Guide */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-[520px] bg-gradient-to-b from-[#e4bd21]/0 via-[#e4bd21]/20 to-transparent" />
+
+        {/* Trident Emblem Watermark */}
+        {/* <div className="absolute top-[40%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[420px] md:w-[500px] lg:w-[560px] opacity-30 md:opacity-35 drop-shadow-[0_0_35px_rgba(228,189,33,0.25)] transition-opacity duration-700">
+          <TridentWatermark className="w-full h-auto" />
+        </div> */}
+
+        {/* Hero Grid Pattern Mask */}
+        <div className="absolute inset-0 hero-grid-pattern opacity-80" />
+      </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-5 md:px-8">
         <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
