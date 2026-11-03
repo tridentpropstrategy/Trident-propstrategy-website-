@@ -1,3 +1,8 @@
+export interface SocialLink {
+  name: "LinkedIn" | "Instagram" | "Facebook" | "YouTube";
+  href: string;
+}
+
 export interface NavItem {
   label: string;
   href: string;
@@ -27,6 +32,12 @@ export const siteConfig = {
     "Ambernath & Badlapur",
     "Shahad & Titwala",
   ],
+  socials: [
+    { name: "LinkedIn", href: "" },
+    { name: "Instagram", href: "" },
+    { name: "Facebook", href: "" },
+    { name: "YouTube", href: "" },
+  ] as SocialLink[],
   navItems: [
     { label: "Services", href: "#services" },
     { label: "ROI Simulator", href: "#calculator" },

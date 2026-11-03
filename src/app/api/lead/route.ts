@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
     const phone = String(body.phone || "").trim().slice(0, 20);
     const project = String(body.project || "").trim().slice(0, 120);
     const rawSource = String(body.source || "contact").trim().toLowerCase();
-    const source = ["hero", "contact", "channel-partner"].includes(rawSource)
+    const source = ["hero", "contact", "channel-partner", "cp-form"].includes(rawSource)
       ? rawSource
       : "contact";
     const microMarket = String(body.microMarket || "").trim().slice(0, 80);

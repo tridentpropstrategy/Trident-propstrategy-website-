@@ -1,5 +1,5 @@
 export interface LeadFormData {
-  source: "hero" | "contact" | "channel-partner";
+  source: "hero" | "contact" | "channel-partner" | "cp-form";
   name: string;
   phone: string;
   project: string;
@@ -8,6 +8,21 @@ export interface LeadFormData {
   scope?: string;
   overview?: string;
   company?: string; // honeypot
+}
+
+export interface CpFormData {
+  name: string;
+  phone: string;
+  firmName: string;
+  address: string;
+  company?: string; // honeypot
+}
+
+export interface CpValidationErrors {
+  name?: string;
+  phone?: string;
+  firmName?: string;
+  address?: string;
 }
 
 export interface ValidationErrors {
@@ -70,3 +85,44 @@ export function validateLeadForm(
 
   return errors;
 }
+
+export function validateCpForm(data: Partial<CpFormData>): CpValidationErrors {
+  const errors: CpValidationErrors = {};
+
+  const name = (data.name || "").trim();
+  if (!name) {
+    errors.name = "Please enter your name";
+  } else if (name.length < 2) {
+    errors.name = "Name must be at least 2 characters";
+  } else if (name.length > 80) {
+    errors.name = "Name must not exceed 80 characters";
+  }
+
+  const phone = (data.phone || "").trim();
+  if (!phone) {
+    errors.phone = "Please enter your contact number";
+  } else if (!isValidIndianPhone(phone)) {
+    errors.phone = "Please enter a valid 10-digit Indian mobile number";
+  }
+
+  const firmName = (data.firmName || "").trim();
+  if (!firmName) {
+    errors.firmName = "Please enter your firm name";
+  } else if (firmName.length < 2) {
+    errors.firmName = "Firm name must be at least 2 characters";
+  } else if (firmName.length > 120) {
+    errors.firmName = "Firm name must not exceed 120 characters";
+  }
+
+  const address = (data.address || "").trim();
+  if (!address) {
+    errors.address = "Please enter your office address";
+  } else if (address.length < 5) {
+    errors.address = "Office address must be at least 5 characters";
+  } else if (address.length > 300) {
+    errors.address = "Office address must not exceed 300 characters";
+  }
+
+  return errors;
+}
+

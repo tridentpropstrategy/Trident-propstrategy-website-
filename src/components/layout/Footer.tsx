@@ -4,11 +4,15 @@ import Link from "next/link";
 import { MapPin, Phone, Mail, ShieldCheck } from "lucide-react";
 import { siteConfig, isPlaceholder, getPhoneLink } from "@/data/site";
 import { caseStudies } from "@/data/caseStudies";
+import { getSocialIcon } from "@/components/ui/SocialIcons";
 
 export function Footer() {
   const currentYear = 2026;
   const phoneLink = getPhoneLink(siteConfig.phone);
   const showResults = caseStudies.length > 0;
+  const activeSocials = (siteConfig.socials || []).filter(
+    (item) => item.href && item.href.trim() !== "" && item.href.trim() !== "#"
+  );
 
   return (
     <footer className="relative bg-[#111d30] border-t border-white/10 pt-16 pb-24 md:pb-16 text-white/80 overflow-hidden">
@@ -44,6 +48,32 @@ export function Footer() {
               activation exclusively tailored for small developers and mandate
               owners across the Kalyan Dombivili and Central Suburbs.
             </p>
+
+            {/* Social Icons row (hidden if no real links configured) */}
+            {activeSocials.length > 0 && (
+              <div className="flex flex-col gap-2 mt-1">
+                <span className="text-[11px] font-semibold uppercase tracking-widest text-[#d5b13a]">
+                  Follow us
+                </span>
+                <div className="flex items-center gap-3 flex-wrap">
+                  {activeSocials.map((social) => {
+                    const IconComponent = getSocialIcon(social.name);
+                    return (
+                      <a
+                        key={social.name}
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${siteConfig.brandName} on ${social.name}`}
+                        className="group w-11 h-11 rounded-full glass border border-[#d5b13a]/25 text-white/80 flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5 hover:bg-gold-gradient hover:text-[#162740] hover:shadow-[0_4px_16px_rgba(213,177,58,0.35)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#d5b13a] focus-visible:ring-offset-2 focus-visible:ring-offset-[#111d30] motion-reduce:transform-none motion-reduce:transition-none"
+                      >
+                        <IconComponent className="w-4 h-4 transition-colors duration-200 group-hover:text-[#162740]" />
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
 
             <div className="flex items-center gap-2 mt-2 text-xs text-[#d5b13a]/90">
               <div className="w-6 h-6 rounded-lg bg-[#d5b13a]/10 flex items-center justify-center text-[#d5b13a]">
