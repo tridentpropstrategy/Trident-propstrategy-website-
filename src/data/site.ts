@@ -29,6 +29,7 @@ export const siteConfig = {
   ],
   navItems: [
     { label: "Services", href: "#services" },
+    { label: "ROI Simulator", href: "#calculator" },
     { label: "Markets", href: "#markets" },
     { label: "Why Trident", href: "#why" },
     { label: "Results", href: "#results" },

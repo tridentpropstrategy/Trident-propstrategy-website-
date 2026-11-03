@@ -77,7 +77,17 @@ export function Header() {
       const el = document.querySelector(href);
 
       if (el) {
-        el.scrollIntoView({ behavior: "smooth" });
+        const prefersReducedMotion =
+          typeof window !== "undefined" &&
+          window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        el.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
+
+        if (window.history && window.history.pushState) {
+          window.history.pushState(null, "", href);
+        } else {
+          window.location.hash = href;
+        }
       }
     }
   };
@@ -122,7 +132,7 @@ export function Header() {
           {/* Desktop Nav */}
           <nav
             aria-label="Main Navigation"
-            className="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-full glass border border-white/10"
+            className="hidden lg:flex items-center gap-0.5 xl:gap-2 px-3 py-1.5 rounded-full glass border border-white/10"
           >
             {navItems.map((item) => {
               const id = item.href.replace("#", "");
@@ -133,7 +143,7 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className={`relative px-4 py-1.5 text-xs lg:text-sm font-medium transition-colors ${isActive
+                  className={`relative px-3 xl:px-4 py-1.5 text-xs xl:text-sm font-medium transition-colors whitespace-nowrap ${isActive
                     ? "text-[#d5b13a]"
                     : "text-white/75 hover:text-white"
                     }`}
@@ -157,17 +167,17 @@ export function Header() {
           </nav>
 
           {/* Desktop CTA Button */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <Button variant="primary" size="sm" href="#contact">
               Book Strategy Audit
             </Button>
           </div>
 
-          {/* Mobile Hamburger Button */}
+          {/* Mobile / Tablet Hamburger Button */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(true)}
-            className="md:hidden w-11 h-11 flex items-center justify-center rounded-xl glass border border-white/10 text-white/80 hover:text-[#d5b13a] hover:border-[#d5b13a]/30"
+            className="lg:hidden w-11 h-11 flex items-center justify-center rounded-xl glass border border-white/10 text-white/80 hover:text-[#d5b13a] hover:border-[#d5b13a]/30"
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-navigation"
             aria-label="Open navigation menu"

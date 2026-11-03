@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
@@ -21,13 +21,40 @@ export function MobileMenu({
   navItems,
   activeSection,
 }: MobileMenuProps) {
-  // Lock body scroll when mobile menu is open
+  const targetHrefRef = useRef<string | null>(null);
+
+  // Manage body scroll lock and handle smooth scroll after drawer close
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
+
+      const href = targetHrefRef.current;
+      if (href && href.startsWith("#")) {
+        targetHrefRef.current = null;
+
+        const timer = setTimeout(() => {
+          const el = document.querySelector(href);
+          if (el) {
+            const prefersReducedMotion =
+              typeof window !== "undefined" &&
+              window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+            el.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
+
+            if (window.history && window.history.pushState) {
+              window.history.pushState(null, "", href);
+            } else {
+              window.location.hash = href;
+            }
+          }
+        }, 180);
+
+        return () => clearTimeout(timer);
+      }
     }
+
     return () => {
       document.body.style.overflow = "";
     };
@@ -44,17 +71,10 @@ export function MobileMenu({
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, onClose]);
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleLinkClick = (e: React.MouseEvent<HTMLElement>, href: string) => {
     e.preventDefault();
+    targetHrefRef.current = href;
     onClose();
-    if (href.startsWith("#")) {
-      const el = document.querySelector(href);
-      if (el) {
-        setTimeout(() => {
-          el.scrollIntoView({ behavior: "smooth" });
-        }, 150);
-      }
-    }
   };
 
   return (
@@ -68,7 +88,7 @@ export function MobileMenu({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
             onClick={onClose}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 md:hidden"
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 lg:hidden"
             aria-hidden="true"
           />
 
@@ -82,7 +102,7 @@ export function MobileMenu({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "tween", duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm h-[100dvh] glass-strong z-50 p-6 flex flex-col justify-between md:hidden border-l border-[#d5b13a]/30 shadow-2xl"
+            className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm h-[100dvh] glass-strong z-50 p-6 flex flex-col justify-between lg:hidden border-l border-[#d5b13a]/30 shadow-2xl"
           >
             <div>
               {/* Header inside drawer */}
@@ -114,26 +134,36 @@ export function MobileMenu({
                 </button>
               </div>
 
-              {/* Navigation Links */}
+              {/* Navigation Links with entrance stagger animation */}
               <nav className="mt-8 flex flex-col gap-2">
-                {navItems.map((item) => {
+                {navItems.map((item, index) => {
                   const isActive = activeSection === item.href.replace("#", "");
                   return (
-                    <Link
+                    <motion.div
                       key={item.href}
-                      href={item.href}
-                      onClick={(e) => handleLinkClick(e, item.href)}
-                      className={`flex items-center justify-between px-4 py-3.5 rounded-xl text-base font-medium transition-all ${
-                        isActive
-                          ? "bg-[#d5b13a]/15 text-[#d5b13a] border border-[#d5b13a]/30"
-                          : "text-white/80 hover:text-[#d5b13a] hover:bg-white/5"
-                      }`}
+                      initial={{ opacity: 0, x: 24 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{
+                        delay: 0.08 + index * 0.04,
+                        duration: 0.25,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
                     >
-                      <span>{item.label}</span>
-                      {isActive && (
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#d5b13a]" />
-                      )}
-                    </Link>
+                      <Link
+                        href={item.href}
+                        onClick={(e) => handleLinkClick(e, item.href)}
+                        className={`flex items-center justify-between px-4 py-3.5 min-h-[48px] rounded-xl text-base font-medium transition-all ${
+                          isActive
+                            ? "bg-[#d5b13a]/15 text-[#d5b13a] border border-[#d5b13a]/30"
+                            : "text-white/80 hover:text-[#d5b13a] hover:bg-white/5"
+                        }`}
+                      >
+                        <span>{item.label}</span>
+                        {isActive && (
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#d5b13a]" />
+                        )}
+                      </Link>
+                    </motion.div>
                   );
                 })}
               </nav>
@@ -145,8 +175,8 @@ export function MobileMenu({
                 variant="primary"
                 size="lg"
                 href="#contact"
-                className="w-full text-center"
-                onClick={onClose}
+                className="w-full text-center min-h-[48px]"
+                onClick={(e) => handleLinkClick(e, "#contact")}
               >
                 Book Strategy Audit
               </Button>
