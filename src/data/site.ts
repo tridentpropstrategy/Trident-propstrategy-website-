@@ -34,7 +34,7 @@ export const siteConfig = {
   ],
   socials: [
     { name: "LinkedIn", href: "http://www.linkedin.com/in/tridentpropstrategy" },
-    { name: "Instagram", href: "https://www.instagram.com/trident_propstrategy?xtok=MTM0anUyNHYxdmI=" },
+    { name: "Instagram", href: "https://www.instagram.com/tridentpropstrategy?obrf=MXZkNDRwbnVidG5kdw==" },
     { name: "Facebook", href: "https://www.facebook.com/share/1Gj9maon14/" },
     { name: "YouTube", href: "https://youtube.com/@tridentpropstrategy?si=tyfL1OPlQI-xegP2" },
   ] as SocialLink[],
