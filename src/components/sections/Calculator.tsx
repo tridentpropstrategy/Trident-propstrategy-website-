@@ -336,7 +336,7 @@ export function Calculator() {
                       className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#d5b13a]/15 border border-[#d5b13a]/30 text-[#d5b13a] text-xs font-bold tracking-wide"
                     >
                       <TrendingUp className="w-3.5 h-3.5" />
-                      <span>{BOOST_FACTOR}.0x velocity</span>
+                      <span>{BOOST_FACTOR.toFixed(1)}x velocity</span>
                     </motion.div>
                   </div>
 

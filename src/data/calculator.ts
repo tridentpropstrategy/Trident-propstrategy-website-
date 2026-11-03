@@ -1,7 +1,7 @@
 // Configurations and constants for Stalled Inventory Capital Recovery Simulator
 
 // PLACEHOLDER. Confirm the real figure with the client before launch
-export const BOOST_FACTOR = 3;
+export const BOOST_FACTOR = 2;
 
 export interface SliderConfig {
   id: "units" | "price" | "rate";
