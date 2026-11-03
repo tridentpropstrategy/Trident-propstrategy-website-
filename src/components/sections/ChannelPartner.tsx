@@ -363,7 +363,7 @@ export function ChannelPartner() {
                           )}
                         </button>
                         <p className="text-xs text-center text-white/60 pt-2">
-                          Our team will contact you shortly.
+                          Our team will contact you soon
                         </p>
                       </div>
                     </form>
