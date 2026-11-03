@@ -33,10 +33,10 @@ export const siteConfig = {
     "Shahad & Titwala",
   ],
   socials: [
-    { name: "LinkedIn", href: "" },
-    { name: "Instagram", href: "" },
-    { name: "Facebook", href: "" },
-    { name: "YouTube", href: "" },
+    { name: "LinkedIn", href: "http://www.linkedin.com/in/tridentpropstrategy" },
+    { name: "Instagram", href: "https://www.instagram.com/trident_propstrategy?xtok=MTM0anUyNHYxdmI=" },
+    { name: "Facebook", href: "https://www.facebook.com/share/1Gj9maon14/" },
+    { name: "YouTube", href: "https://youtube.com/@tridentpropstrategy?si=tyfL1OPlQI-xegP2" },
   ] as SocialLink[],
   navItems: [
     { label: "Services", href: "#services" },
