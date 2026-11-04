@@ -10,31 +10,31 @@ export function HowItWorks() {
   const steps = [
     {
       number: "01",
-      icon: Search,
-      title: "Audit",
-      description:
-        "Comprehensive on-ground evaluation of your unsold inventory, floor plans, and pricing matrix.",
-    },
-    {
-      number: "02",
       icon: Compass,
       title: "Strategy",
       description:
         "Custom positioning roadmap, buyer absorption persona, and objection-handling scripts.",
     },
     {
-      number: "03",
+      number: "02",
       icon: Users2,
       title: "Team & CP Activation",
       description:
         "Sales executive masterclasses combined with high-conviction channel partner briefings across MMR.",
     },
     {
-      number: "04",
+      number: "03",
       icon: LineChart,
       title: "Sales Tracking",
       description:
         "Weekly conversion tracking, walk-in pipeline audits, and milestone inventory liquidation.",
+    },
+    {
+      number: "04",
+      icon: Search,
+      title: "Audit",
+      description:
+        "Comprehensive on-ground evaluation of your unsold inventory, floor plans, and pricing matrix.",
     },
   ];
 
@@ -52,12 +52,15 @@ export function HowItWorks() {
 
         {/* Steps Grid */}
         <RevealGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {steps.map((step, idx) => {
-              const Icon = step.icon;
-              return (
-                <RevealItem key={idx}>
-                  <GlassCard className="p-6 md:p-7 flex flex-col justify-between h-full border-white/10 hover:border-[#d5b13a]/50">
-                    <div>
+          {steps.map((step, idx) => {
+            const Icon = step.icon;
+            return (
+              <RevealItem key={idx} className="h-full">
+                <GlassCard className="h-full border-white/10 hover:border-[#d5b13a]/50">
+                  {/* This wrapper owns the padding and the full-height flex column */}
+                  <div className="flex flex-col h-full p-6 md:p-7">
+                    {/* Content grows to fill, pushing the footer to the bottom */}
+                    <div className="flex-1">
                       {/* Step Header */}
                       <div className="flex items-center justify-between mb-6">
                         <div className="w-12 h-12 rounded-xl bg-[#d5b13a]/15 border border-[#d5b13a]/30 flex items-center justify-center text-[#d5b13a] shadow-[0_0_20px_rgba(213,177,58,0.18)]">
@@ -77,15 +80,17 @@ export function HowItWorks() {
                       </p>
                     </div>
 
+                    {/* Footer: always pinned to the bottom */}
                     <div className="pt-6 mt-6 border-t border-white/10 flex items-center justify-between text-[11px] text-[#d5b13a]/80 font-medium uppercase tracking-wider">
                       <span>Phase {step.number}</span>
                       <span>Verified Milestone</span>
                     </div>
-                  </GlassCard>
-                </RevealItem>
-              );
-            })}
-          </RevealGroup>
+                  </div>
+                </GlassCard>
+              </RevealItem>
+            );
+          })}
+        </RevealGroup>
       </div>
     </section>
   );
