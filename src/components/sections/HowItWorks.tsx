@@ -10,32 +10,33 @@ export function HowItWorks() {
   const steps = [
     {
       number: "01",
-      icon: Compass,
+      icon: Search,
       title: "Market Analysis",
       description:
-        "In-depth evaluation of micro-market demand, competitor pricing, buyer demographics, and project positioning across key growth corridors.  ",
+        "In-depth evaluation of micro-market demand, competitor pricing, buyer demographics, and project positioning across key growth corridors.",
     },
     {
       number: "02",
+      icon: Compass,
+      title: "Strategy",
+      description:
+        "Custom positioning roadmap, buyer absorption persona, and objection-handling scripts.",
+    },
+    {
+      number: "03",
       icon: Users2,
       title: "Team & CP Activation",
       description:
         "Sales executive masterclasses combined with high-conviction channel partner briefings across MMR.",
     },
     {
-      number: "03",
+      number: "04",
       icon: LineChart,
       title: "Sales Tracking",
       description:
         "Weekly conversion tracking, walk-in pipeline audits, and milestone inventory liquidation.",
     },
-    {
-      number: "04",
-      icon: Search,
-      title: "Audit",
-      description:
-        "Comprehensive on-ground evaluation of your unsold inventory, floor plans, and pricing matrix.",
-    },
+
   ];
 
   return (
