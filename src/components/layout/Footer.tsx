@@ -51,9 +51,7 @@ export function Footer() {
             </Link>
 
             <p className="text-sm text-white/70 leading-relaxed max-w-sm mx-auto md:mx-0">
-              Strategic sales advisory, mandate acceleration, and channel partner
-              activation exclusively tailored for small developers and mandate
-              owners across the Kalyan Dombivili and Central Suburbs.
+              Strategic sales advisory, project mandate acceleration, and channel partner network deployment engineered for growth-focused developers and institutional project owners across the extended Central Suburban growth corridors
             </p>
 
             <div className="flex items-center justify-center md:justify-start gap-2 mt-2 text-xs text-[#d5b13a]/90">

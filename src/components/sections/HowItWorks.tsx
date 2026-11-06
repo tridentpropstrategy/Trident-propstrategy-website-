@@ -11,9 +11,9 @@ export function HowItWorks() {
     {
       number: "01",
       icon: Compass,
-      title: "Strategy",
+      title: "Market Analysis",
       description:
-        "Custom positioning roadmap, buyer absorption persona, and objection-handling scripts.",
+        "In-depth evaluation of micro-market demand, competitor pricing, buyer demographics, and project positioning across key growth corridors.  ",
     },
     {
       number: "02",

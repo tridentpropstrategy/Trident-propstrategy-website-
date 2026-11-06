@@ -13,8 +13,8 @@ export function Hero() {
   const showStats = hasVerifiedStats(stats);
 
   const headlineParts = [
-    { text: "Transform your Stalled Inventory into ", isGold: false },
-    { text: "High-Velocity Sales", isGold: true },
+    { text: "Transform Your Project Into ", isGold: false },
+    { text: "High Velocity Sales", isGold: true },
   ];
 
   return (

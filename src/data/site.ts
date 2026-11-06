@@ -20,7 +20,7 @@ export const siteConfig = {
   domain: "https://tridentpropstrategy.in",
   phone: "7304355449",
   whatsapp: "7304355448",
-  email: "tridentpropstrategy@gmail.com",
+  email: "contact@tridentpropstrategy.in",
   address: "Trident Prop Strategy Tower, Station Road, Kalyan West, KDMC Region, Maharashtra 421301",
   city: "Kalyan",
   region: "Maharashtra, India",
