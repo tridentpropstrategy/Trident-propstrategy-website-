@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.domain),
   title: {
-    default: "Trident Prop Strategy | Real Estate Sales Acceleration for KDMC Developers",
+    default: "Trident Prop Strategy | For Real Estate Developers",
     template: "%s | Trident Prop Strategy",
   },
   description:
@@ -49,14 +49,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_IN",
     url: siteConfig.domain,
-    title: "Trident Prop Strategy | Real Estate Sales Acceleration for KDMC Developers",
+    title: "Trident Prop Strategy | For Real Estate Developers",
     description:
       "Data-driven sales advisory, sales team training, and channel partner activation for real estate developers across Kalyan, Dombivli, and KDMC suburbs.",
     siteName: siteConfig.brandName,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trident Prop Strategy | Real Estate Sales Acceleration for KDMC Developers",
+    title: "Trident Prop Strategy | For Real Estate Developers",
     description:
       "Data-driven sales advisory, sales team training, and channel partner activation for real estate developers across Kalyan, Dombivli, and KDMC suburbs.",
   },
